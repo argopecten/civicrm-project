@@ -1,22 +1,38 @@
 {
-    "name": "drupal-composer/drupal-project",
-    "description": "Project template for Drupal 7 projects with composer",
+    "name": "argopecten/civicrm-project",
+    "description": "CiviCRM platform with Drupal 7 on Aegir 3, using Composer",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
-            "name": "",
+            "name": "Argopecten",
             "role": ""
         }
     ],
-    "repositories": [
-        {
+    "repositories": {
+        "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/7"
+        },
+        "civicrm-profile": {
+            "type": "vcs",
+            "url":  "https://github.com/argopecten/civicrm-profile"
+        },
+        "civicrm-core": {
+            "type": "package",
+            "package": {
+                "name": "civicrm/civicrm",
+                "version": "5.13.4",
+                "type": "drupal-module",
+                "dist": {
+                    "url": "https://download.civicrm.org/civicrm-5.13.4-drupal.tar.gz",
+                    "type": "tar"
+                }
+            }
         }
-    ],
+    },
     "require": {
-        "php": ">=5.3.3",
+        "php": ">=7.2.0",
         "ext-curl": "*",
         "ext-gd": "*",
         "ext-json": "*",
@@ -28,10 +44,11 @@
         "cweagans/composer-patches": "^1.6.5",
         "drupal-composer/preserve-paths": "^0.1",
         "drupal/composer_autoloader": "^1.0",
-        "drupal/drupal": "^7.62",
+        "drupal/drupal": "7.67",
         "drush/drush": "^8.0",
         "symfony/filesystem": "~2.7|^3",
-        "webflo/drupal-finder": "^1.0.0"
+        "webflo/drupal-finder": "^1.0.0",
+        "argopecten/civicrmprofile": "5.13.4+7.67"
     },
     "conflict": {
         "drupal/core": "8.*"
@@ -47,6 +64,11 @@
         ]
     },
     "scripts": {
+        "remove-built-in-profiles": [
+            "rm -rf web/profiles/standard",
+            "rm -rf web/profiles/minimal",
+            "rm -rf web/profiles/testing"
+        ],
         "pre-install-cmd": [
             "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
@@ -54,10 +76,12 @@
             "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
         "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+            "@remove-built-in-profiles"
         ],
         "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+            "@remove-built-in-profiles"
         ],
         "post-create-project-cmd": [
             "DrupalProject\\composer\\ScriptHandler::removeInternalFiles"
