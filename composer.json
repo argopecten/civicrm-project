@@ -57,7 +57,7 @@
         }
     },
     "require": {
-        "php": ">=7.2.0",
+        "php": "7.2.* || 7.3.*",
         "ext-curl": "*",
         "ext-gd": "*",
         "ext-json": "*",
@@ -69,7 +69,7 @@
         "cweagans/composer-patches": "^1.6.5",
         "drupal-composer/preserve-paths": "^0.1",
         "drupal/composer_autoloader": "^1.0",
-        "drupal/drupal": "7.67",
+        "drupal/drupal": "^7.69",
         "drush/drush": "^8.0",
         "symfony/filesystem": "~2.7|^3",
         "webflo/drupal-finder": "^1.0.0",
