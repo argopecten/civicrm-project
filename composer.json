@@ -73,7 +73,7 @@
         "drush/drush": "^8.0",
         "symfony/filesystem": "~2.7|^3",
         "webflo/drupal-finder": "^1.0.0",
-        "argopecten/civicrmprofile": "7.x-features/users"
+        "argopecten/civicrmprofile": "dev-7.x-feature/users@dev"
     },
     "conflict": {
         "drupal/core": "8.*"
