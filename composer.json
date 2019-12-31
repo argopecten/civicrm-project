@@ -105,25 +105,27 @@
             "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.shoreditch; git checkout 'v0.1-alpha32'"
         ],
         "pre-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+            "CiviCRMProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
         "pre-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+            "CiviCRMProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
         "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+            "CiviCRMProject\\composer\\ScriptHandler::createRequiredFiles",
+            "CiviCRMProject\\composer\\CiviCRMSetup::changeCrmPermissions",
             "@remove-built-in-profiles",
             "@install-l10n",
             "@theme-settings"
         ],
         "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+            "CiviCRMProject\\composer\\ScriptHandler::createRequiredFiles",
+            "CiviCRMProject\\composer\\CiviCRMSetup::changeCrmPermissions",
             "@remove-built-in-profiles",
             "@install-l10n",
             "@theme-settings"
         ],
         "post-create-project-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::removeInternalFiles"
+            "CiviCRMProject\\composer\\ScriptHandler::removeInternalFiles"
         ]
     },
     "extra": {
