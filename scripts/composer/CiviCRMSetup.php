@@ -17,8 +17,8 @@ class CiviCRMSetup {
   public static function changeCrmPermissions() {
 
     // revoke CRM permissions from site administrator
-    $sieadmin_role = user_role_load_by_name('site admin');
-    user_role_change_permissions($crmadmin_role->rid,
+    $siteadmin_role = user_role_load_by_name('site admin');
+    user_role_change_permissions($sitedmin_role->rid,
        array(
          'add contacts' => FALSE,
          'view all contacts' => FALSE,
