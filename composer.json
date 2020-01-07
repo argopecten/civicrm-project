@@ -22,10 +22,10 @@
             "type": "package",
             "package": {
                 "name": "civicrm/civicrm",
-                "version": "5.15.1",
+                "version": "5.20.2",
                 "type": "drupal-module",
                 "dist": {
-                    "url": "https://download.civicrm.org/civicrm-5.15.1-drupal.tar.gz",
+                    "url": "https://download.civicrm.org/civicrm-5.20.2-drupal.tar.gz",
                     "type": "tar"
                 }
             }
@@ -34,10 +34,10 @@
             "type": "package",
             "package": {
                 "name": "civicrm/civicrm_l10n_core",
-                "version": "5.15.1",
+                "version": "5.20.2",
                 "type": "drupal-library",
                 "dist": {
-                    "url": "https://download.civicrm.org/civicrm-5.15.1-l10n.tar.gz",
+                    "url": "https://download.civicrm.org/civicrm-5.20.2-l10n.tar.gz",
                     "type": "tar"
                 }
             }
@@ -46,7 +46,7 @@
             "type": "package",
             "package": {
                 "name": "civicrm/org.civicrm.shoreditch",
-                "version": "v0.1-alpha32",
+                "version": "v0.1-alpha35",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/civicrm/org.civicrm.shoreditch",
@@ -57,7 +57,7 @@
         }
     },
     "require": {
-        "php": ">=7.2.0",
+        "php": "7.2.* || 7.3.*",
         "ext-curl": "*",
         "ext-gd": "*",
         "ext-json": "*",
@@ -69,11 +69,11 @@
         "cweagans/composer-patches": "^1.6.5",
         "drupal-composer/preserve-paths": "^0.1",
         "drupal/composer_autoloader": "^1.0",
-        "drupal/drupal": "7.67",
+        "drupal/drupal": "^7.69",
         "drush/drush": "^8.0",
         "symfony/filesystem": "~2.7|^3",
         "webflo/drupal-finder": "^1.0.0",
-        "argopecten/civicrmprofile": "dev-7.x-feature/users@dev"
+        "argopecten/civicrmprofile": "dev-7.x-feature/2fa@dev"
     },
     "conflict": {
         "drupal/core": "8.*"
@@ -102,7 +102,7 @@
         ],
         "theme-settings": [
             "mv web/sites/all/libraries/org.civicrm.shoreditch web/sites/all/modules/contrib/civicrm/ext",
-            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.shoreditch; git checkout 'v0.1-alpha32'"
+            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.shoreditch; git checkout 'v0.1-alpha35'"
         ],
         "pre-install-cmd": [
             "CiviCRMProject\\composer\\ScriptHandler::checkComposerVersion"
