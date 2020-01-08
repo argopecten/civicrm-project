@@ -85,8 +85,7 @@
     },
     "autoload": {
         "classmap": [
-            "scripts/composer/ScriptHandler.php",
-            "scripts/composer/CiviCRMSetup.php"
+            "scripts/composer/ScriptHandler.php"
         ]
     },
     "scripts": {
@@ -120,7 +119,6 @@
         ],
         "post-update-cmd": [
             "CiviCRMProject\\composer\\ScriptHandler::createRequiredFiles",
-            "CiviCRMProject\\composer\\CiviCRMSetup::changeCrmPermissions",
             "@remove-built-in-profiles",
             "@install-l10n",
             "@move-drush-files",
