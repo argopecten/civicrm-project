@@ -73,7 +73,7 @@
         "drush/drush": "^8.0",
         "symfony/filesystem": "~2.7|^3",
         "webflo/drupal-finder": "^1.0.0",
-        "argopecten/civicrmprofile": "dev-7.x-feature/2fa@dev"
+        "argopecten/civicrmprofile": "dev-7.x-feature/users-demo@dev"
     },
     "conflict": {
         "drupal/core": "8.*"
@@ -93,6 +93,10 @@
             "rm -rf web/profiles/standard",
             "rm -rf web/profiles/minimal",
             "rm -rf web/profiles/testing"
+        ],
+        "move-drush-files": [
+            "cp -rl web/profiles/civicrmprofile/drush web/sites/all",
+            "rm -rf web/profiles/civicrmprofile/drush"
         ],
         "install-l10n": [
             "mkdir -p web/sites/all/modules/contrib/civicrm/l10n",
@@ -115,6 +119,7 @@
             "CiviCRMProject\\composer\\CiviCRMSetup::changeCrmPermissions",
             "@remove-built-in-profiles",
             "@install-l10n",
+            "@move-drush-files",
             "@theme-settings"
         ],
         "post-update-cmd": [
