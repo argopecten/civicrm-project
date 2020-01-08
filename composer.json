@@ -73,7 +73,7 @@
         "drush/drush": "^8.0",
         "symfony/filesystem": "~2.7|^3",
         "webflo/drupal-finder": "^1.0.0",
-        "argopecten/civicrmprofile": "dev-7.x-feature/users-demo@dev"
+        "argopecten/civicrmprofile": "dev-7.x-features/users-demo@dev"
     },
     "conflict": {
         "drupal/core": "8.*"
@@ -85,7 +85,8 @@
     },
     "autoload": {
         "classmap": [
-            "scripts/composer/ScriptHandler.php"
+            "scripts/composer/ScriptHandler.php",
+            "scripts/composer/CiviCRMSetup.php"
         ]
     },
     "scripts": {
@@ -115,18 +116,14 @@
             "CiviCRMProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
         "post-install-cmd": [
-            "CiviCRMProject\\composer\\ScriptHandler::createRequiredFiles",
-            "CiviCRMProject\\composer\\CiviCRMSetup::changeCrmPermissions",
-            "@remove-built-in-profiles",
-            "@install-l10n",
-            "@move-drush-files",
-            "@theme-settings"
+            "CiviCRMProject\\composer\\ScriptHandler::createRequiredFiles"
         ],
         "post-update-cmd": [
             "CiviCRMProject\\composer\\ScriptHandler::createRequiredFiles",
             "CiviCRMProject\\composer\\CiviCRMSetup::changeCrmPermissions",
             "@remove-built-in-profiles",
             "@install-l10n",
+            "@move-drush-files",
             "@theme-settings"
         ],
         "post-create-project-cmd": [
