@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains \DrupalProject\composer\ScriptHandler.
+ * Contains \CiviCRMProject\composer\ScriptHandler.
  */
 
 namespace CiviCRMProject\composer;
