@@ -143,6 +143,9 @@
             },
             "drupal/tfa": {
                 "2FA: PHP Mcrypt patch for PHP 7.1+" : "https://www.drupal.org/files/issues/2019-06-16/tfa-2820710-54.patch"
+            },
+            "drupal/tfa_rules": {
+                "TFA Rules: Allow password resets" : "https://www.drupal.org/files/issues/tfa_rules_allow_password_reset.patch"
             }
         },
         "preserve-paths": [
