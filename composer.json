@@ -54,6 +54,19 @@
                     "reference": "master"
                 }
             }
+        },
+        "csvimport": {
+            "type": "package",
+            "package": {
+                "name": "eileenmcnaughton/nz.co.fuzion.csvimport",
+                "version": "1.5",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/eileenmcnaughton/nz.co.fuzion.csvimport",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
         }
     },
     "require": {
@@ -94,6 +107,10 @@
             "rm -rf web/profiles/minimal",
             "rm -rf web/profiles/testing"
         ],
+        "set-extensions": [
+            "mv web/sites/all/libraries/* web/sites/all/modules/contrib/civicrm/ext/",
+            "cd web/sites/all/modules/contrib/civicrm/ext/nz.co.fuzion.csvimport; git checkout '1.5'"
+        ],
         "move-drush-files": [
             "cp -rl web/profiles/civicrmprofile/drush web/sites/all",
             "rm -rf web/profiles/civicrmprofile/drush"
@@ -105,7 +122,6 @@
             "rm -rf web/sites/all/libraries/civicrm_l10n_core"
         ],
         "theme-settings": [
-            "mv web/sites/all/libraries/org.civicrm.shoreditch web/sites/all/modules/contrib/civicrm/ext",
             "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.shoreditch; git checkout 'v0.1-alpha35'"
         ],
         "pre-install-cmd": [
