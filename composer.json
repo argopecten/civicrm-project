@@ -138,6 +138,7 @@
             "@remove-built-in-profiles",
             "@install-l10n",
             "@move-drush-files",
+            "@set-extensions",
             "@theme-settings"
         ],
         "post-create-project-cmd": [
