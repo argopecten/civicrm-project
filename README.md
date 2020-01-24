@@ -15,7 +15,7 @@ Then, with this composer template, you can create an CiviCRM platform in your Ae
 * Git URL: `https://github.com/argopecten/drupal-project`
 * Branch/tag: `5.13.4` or [any other tags from the repository](https://github.com/argopecten/drupal-project/releases)
 
-## What does the template do? 
+## What does the template do?
 
 When installing the given `composer.json` of this template, some tasks are taken care of:
 

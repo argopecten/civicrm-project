@@ -22,10 +22,10 @@
             "type": "package",
             "package": {
                 "name": "civicrm/civicrm",
-                "version": "5.15.1",
+                "version": "5.21.1",
                 "type": "drupal-module",
                 "dist": {
-                    "url": "https://download.civicrm.org/civicrm-5.15.1-drupal.tar.gz",
+                    "url": "https://download.civicrm.org/civicrm-5.21.1-drupal.tar.gz",
                     "type": "tar"
                 }
             }
@@ -34,10 +34,10 @@
             "type": "package",
             "package": {
                 "name": "civicrm/civicrm_l10n_core",
-                "version": "5.15.1",
+                "version": "5.21.1",
                 "type": "drupal-library",
                 "dist": {
-                    "url": "https://download.civicrm.org/civicrm-5.15.1-l10n.tar.gz",
+                    "url": "https://download.civicrm.org/civicrm-5.21.1-l10n.tar.gz",
                     "type": "tar"
                 }
             }
@@ -46,7 +46,7 @@
             "type": "package",
             "package": {
                 "name": "civicrm/org.civicrm.shoreditch",
-                "version": "v0.1-alpha32",
+                "version": "v0.1-alpha35",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/civicrm/org.civicrm.shoreditch",
@@ -54,10 +54,23 @@
                     "reference": "master"
                 }
             }
+        },
+        "csvimport": {
+            "type": "package",
+            "package": {
+                "name": "eileenmcnaughton/nz.co.fuzion.csvimport",
+                "version": "1.5",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/eileenmcnaughton/nz.co.fuzion.csvimport",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
         }
     },
     "require": {
-        "php": ">=7.2.0",
+        "php": "7.2.* || 7.3.*",
         "ext-curl": "*",
         "ext-gd": "*",
         "ext-json": "*",
@@ -69,11 +82,11 @@
         "cweagans/composer-patches": "^1.6.5",
         "drupal-composer/preserve-paths": "^0.1",
         "drupal/composer_autoloader": "^1.0",
-        "drupal/drupal": "7.67",
+        "drupal/drupal": "^7.69",
         "drush/drush": "^8.0",
         "symfony/filesystem": "~2.7|^3",
         "webflo/drupal-finder": "^1.0.0",
-        "argopecten/civicrmprofile": "5.15.1+7.67"
+        "argopecten/civicrmprofile": "5.21.1+7.69"
     },
     "conflict": {
         "drupal/core": "8.*"
@@ -94,6 +107,14 @@
             "rm -rf web/profiles/minimal",
             "rm -rf web/profiles/testing"
         ],
+        "set-extensions": [
+            "mv web/sites/all/libraries/* web/sites/all/modules/contrib/civicrm/ext/",
+            "cd web/sites/all/modules/contrib/civicrm/ext/nz.co.fuzion.csvimport; git checkout '1.5'"
+        ],
+        "move-drush-files": [
+            "cp -rl web/profiles/civicrmprofile/drush web/sites/all",
+            "rm -rf web/profiles/civicrmprofile/drush"
+        ],
         "install-l10n": [
             "mkdir -p web/sites/all/modules/contrib/civicrm/l10n",
             "cp -r web/sites/all/libraries/civicrm_l10n_core/l10n/hu_HU/ web/sites/all/modules/contrib/civicrm/l10n",
@@ -101,29 +122,27 @@
             "rm -rf web/sites/all/libraries/civicrm_l10n_core"
         ],
         "theme-settings": [
-            "mv web/sites/all/libraries/org.civicrm.shoreditch web/sites/all/modules/contrib/civicrm/ext",
-            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.shoreditch; git checkout 'v0.1-alpha32'"
+            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.shoreditch; git checkout 'v0.1-alpha35'"
         ],
         "pre-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+            "CiviCRMProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
         "pre-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+            "CiviCRMProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
         "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "@remove-built-in-profiles",
-            "@install-l10n",
-            "@theme-settings"
+            "CiviCRMProject\\composer\\ScriptHandler::createRequiredFiles"
         ],
         "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+            "CiviCRMProject\\composer\\ScriptHandler::createRequiredFiles",
             "@remove-built-in-profiles",
             "@install-l10n",
+            "@move-drush-files",
+            "@set-extensions",
             "@theme-settings"
         ],
         "post-create-project-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::removeInternalFiles"
+            "CiviCRMProject\\composer\\ScriptHandler::removeInternalFiles"
         ]
     },
     "extra": {
