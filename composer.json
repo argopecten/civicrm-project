@@ -122,8 +122,8 @@
         ],
         "set-extensions": [
             "mv web/sites/all/libraries/* web/sites/all/modules/contrib/civicrm/ext/",
-            "cd web/sites/all/modules/contrib/civicrm/ext/nz.co.fuzion.csvimport; git checkout '1.5'"
-            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.sms.clickatell.git; git checkout unicode"
+            "cd web/sites/all/modules/contrib/civicrm/ext/nz.co.fuzion.csvimport; git checkout '1.5'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.sms.clickatell; git checkout unicode"
         ],
         "move-drush-files": [
             "cp -rl web/profiles/civicrmprofile/drush web/sites/all",
