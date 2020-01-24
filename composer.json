@@ -67,6 +67,19 @@
                     "reference": "master"
                 }
             }
+        },
+        "clickatell": {
+            "type": "package",
+            "package": {
+                "name": "petergerner/org.civicrm.sms.clickatell",
+                "version": "v4.1.1",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/petergerner/org.civicrm.sms.clickatell",
+                    "type": "git",
+                    "reference": "unicode"
+                }
+            }
         }
     },
     "require": {
@@ -86,7 +99,7 @@
         "drush/drush": "^8.0",
         "symfony/filesystem": "~2.7|^3",
         "webflo/drupal-finder": "^1.0.0",
-        "argopecten/civicrmprofile": "5.21.1+7.69"
+        "argopecten/civicrmprofile": "dev-7.x-lemp-migration"
     },
     "conflict": {
         "drupal/core": "8.*"
@@ -110,6 +123,7 @@
         "set-extensions": [
             "mv web/sites/all/libraries/* web/sites/all/modules/contrib/civicrm/ext/",
             "cd web/sites/all/modules/contrib/civicrm/ext/nz.co.fuzion.csvimport; git checkout '1.5'"
+            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.sms.clickatell.git; git checkout unicode"
         ],
         "move-drush-files": [
             "cp -rl web/profiles/civicrmprofile/drush web/sites/all",
@@ -157,6 +171,12 @@
         "patches": {
             "cweagans/composer-patches": {
                 "Call the preserve paths hooks" : "https://github.com/SebCorbin/composer-patches/commit/1cb9bacba51f8bba0c5f3f322c3bb61e4ceae974.patch"
+            },
+            "drupal/tfa": {
+                "2FA: PHP Mcrypt patch for PHP 7.1+" : "https://www.drupal.org/files/issues/2019-06-16/tfa-2820710-54.patch"
+            },
+            "drupal/tfa_rules": {
+                "TFA Rules: Allow password resets" : "https://www.drupal.org/files/issues/tfa_rules_allow_password_reset.patch"
             }
         },
         "preserve-paths": [
