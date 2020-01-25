@@ -99,7 +99,7 @@
         "drush/drush": "^8.0",
         "symfony/filesystem": "~2.7|^3",
         "webflo/drupal-finder": "^1.0.0",
-        "argopecten/civicrmprofile": "dev-7.x-lemp-migration"
+        "argopecten/civicrmprofile": "dev-7.x-lemp#lemp-5.21@dev"
     },
     "conflict": {
         "drupal/core": "8.*"
