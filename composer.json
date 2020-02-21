@@ -22,10 +22,10 @@
             "type": "package",
             "package": {
                 "name": "civicrm/civicrm",
-                "version": "5.21.1",
+                "version": "5.22.1",
                 "type": "drupal-module",
                 "dist": {
-                    "url": "https://download.civicrm.org/civicrm-5.21.1-drupal.tar.gz",
+                    "url": "https://download.civicrm.org/civicrm-5.22.1-drupal.tar.gz",
                     "type": "tar"
                 }
             }
@@ -34,10 +34,10 @@
             "type": "package",
             "package": {
                 "name": "civicrm/civicrm_l10n_core",
-                "version": "5.21.1",
+                "version": "5.22.1",
                 "type": "drupal-library",
                 "dist": {
-                    "url": "https://download.civicrm.org/civicrm-5.21.1-l10n.tar.gz",
+                    "url": "https://download.civicrm.org/civicrm-5.22.1-l10n.tar.gz",
                     "type": "tar"
                 }
             }
@@ -46,7 +46,7 @@
             "type": "package",
             "package": {
                 "name": "civicrm/org.civicrm.shoreditch",
-                "version": "v0.1-alpha35",
+                "version": "v0.1-alpha36",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/civicrm/org.civicrm.shoreditch",
@@ -86,7 +86,7 @@
         "drush/drush": "^8.0",
         "symfony/filesystem": "~2.7|^3",
         "webflo/drupal-finder": "^1.0.0",
-        "argopecten/civicrmprofile": "5.21.1+7.69"
+        "argopecten/civicrmprofile": "5.22.1-alpha1+7.69@dev"
     },
     "conflict": {
         "drupal/core": "8.*"
@@ -122,7 +122,7 @@
             "rm -rf web/sites/all/libraries/civicrm_l10n_core"
         ],
         "theme-settings": [
-            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.shoreditch; git checkout 'v0.1-alpha35'"
+            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.shoreditch; git checkout 'v0.1-alpha36'"
         ],
         "pre-install-cmd": [
             "CiviCRMProject\\composer\\ScriptHandler::checkComposerVersion"
