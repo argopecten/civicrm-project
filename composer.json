@@ -111,7 +111,7 @@
             "type": "package",
             "package": {
                 "name": "ginkgostreet/org.civicrm.angularprofiles",
-                "version": "v4.7.31-1.1.2",
+                "version": "v4.7.31",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/ginkgostreet/org.civicrm.angularprofiles",
