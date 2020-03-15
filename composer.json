@@ -106,6 +106,32 @@
                     "reference": "master"
                 }
             }
+        },
+        "angularprofiles": {
+            "type": "package",
+            "package": {
+                "name": "ginkgostreet/org.civicrm.angularprofiles",
+                "version": "v4.7.31-1.1.2",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/ginkgostreet/org.civicrm.angularprofiles",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        },
+        "contactlayout": {
+            "type": "package",
+            "package": {
+                "name": "civicrm/org.civicrm.contactlayout",
+                "version": "1.4.3",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/civicrm/org.civicrm.contactlayout",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
         }
     },
     "require": {
