@@ -78,6 +78,9 @@
                     "url": "https://github.com/petergerner/org.civicrm.sms.clickatell",
                     "type": "git",
                     "reference": "unicode"
+                }
+            }
+        },
         "civimobileapi": {
             "type": "package",
             "package": {
