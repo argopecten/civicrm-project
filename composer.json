@@ -22,10 +22,10 @@
             "type": "package",
             "package": {
                 "name": "civicrm/civicrm",
-                "version": "5.22.1",
+                "version": "5.23.2",
                 "type": "drupal-module",
                 "dist": {
-                    "url": "https://download.civicrm.org/civicrm-5.22.1-drupal.tar.gz",
+                    "url": "https://download.civicrm.org/civicrm-5.23.2-drupal.tar.gz",
                     "type": "tar"
                 }
             }
@@ -34,10 +34,10 @@
             "type": "package",
             "package": {
                 "name": "civicrm/civicrm_l10n_core",
-                "version": "5.22.1",
+                "version": "5.23.2",
                 "type": "drupal-library",
                 "dist": {
-                    "url": "https://download.civicrm.org/civicrm-5.22.1-l10n.tar.gz",
+                    "url": "https://download.civicrm.org/civicrm-5.23.2-l10n.tar.gz",
                     "type": "tar"
                 }
             }
@@ -67,6 +67,71 @@
                     "reference": "master"
                 }
             }
+        },
+        "civimobileapi": {
+            "type": "package",
+            "package": {
+                "name": "agiliway/com.agiliway.civimobileapi",
+                "version": "v5.0.1",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/agiliway/com.agiliway.civimobileapi",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        },
+        "flexmailer": {
+            "type": "package",
+            "package": {
+                "name": "civicrm/org.civicrm.flexmailer",
+                "version": "v1.1.1",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/civicrm/org.civicrm.flexmailer/",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        },
+        "gdpr": {
+            "type": "package",
+            "package": {
+                "name": "veda-consulting/uk.co.vedaconsulting.gdpr",
+                "version": "v2.8",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/veda-consulting/uk.co.vedaconsulting.gdpr",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        },
+        "angularprofiles": {
+            "type": "package",
+            "package": {
+                "name": "ginkgostreet/org.civicrm.angularprofiles",
+                "version": "v4.7.31",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/ginkgostreet/org.civicrm.angularprofiles",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        },
+        "contactlayout": {
+            "type": "package",
+            "package": {
+                "name": "civicrm/org.civicrm.contactlayout",
+                "version": "1.4.3",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/civicrm/org.civicrm.contactlayout",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
         }
     },
     "require": {
@@ -86,7 +151,7 @@
         "drush/drush": "^8.0",
         "symfony/filesystem": "~2.7|^3",
         "webflo/drupal-finder": "^1.0.0",
-        "argopecten/civicrmprofile": "dev-7.x-local#local-stable@dev"
+        "argopecten/civicrmprofile": "5.23.2+7.69"
     },
     "conflict": {
         "drupal/core": "8.*"
@@ -157,12 +222,6 @@
         "patches": {
             "cweagans/composer-patches": {
                 "Call the preserve paths hooks" : "https://github.com/SebCorbin/composer-patches/commit/1cb9bacba51f8bba0c5f3f322c3bb61e4ceae974.patch"
-            },
-            "drupal/tfa": {
-                "2FA: PHP Mcrypt patch for PHP 7.1+" : "https://www.drupal.org/files/issues/2019-06-16/tfa-2820710-54.patch"
-            },
-            "drupal/tfa_rules": {
-                "TFA Rules: Allow password resets" : "https://www.drupal.org/files/issues/tfa_rules_allow_password_reset.patch"
             }
         },
         "preserve-paths": [
