@@ -132,6 +132,19 @@
                     "reference": "master"
                 }
             }
+          },
+        "civivolunteer": {
+            "type": "package",
+            "package": {
+                "name": "civicrm/org.civicrm.volunteer",
+                "version": "v4.7.31",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/civicrm/org.civicrm.volunteer",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
         }
     },
     "require": {
@@ -151,7 +164,7 @@
         "drush/drush": "^8.0",
         "symfony/filesystem": "~2.7|^3",
         "webflo/drupal-finder": "^1.0.0",
-        "argopecten/civicrmprofile": "dev-7.x-atlo#atlo-5.23@dev"
+        "argopecten/civicrmprofile": "dev-7.x-help"
     },
     "conflict": {
         "drupal/core": "8.*"
@@ -175,6 +188,7 @@
         "set-extensions": [
             "mv web/sites/all/libraries/* web/sites/all/modules/contrib/civicrm/ext/",
             "cd web/sites/all/modules/contrib/civicrm/ext/nz.co.fuzion.csvimport; git checkout '1.5'"
+            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.volunteer; git checkout master"
         ],
         "move-drush-files": [
             "cp -rl web/profiles/civicrmprofile/drush web/sites/all",
