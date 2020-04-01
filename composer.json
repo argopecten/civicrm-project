@@ -132,7 +132,46 @@
                     "reference": "master"
                 }
             }
-          },
+        },
+        "openstreetmap": {
+            "type": "package",
+            "package": {
+                "name": "bjendres/de.systopia.osm",
+                "version": "1.2.1",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/bjendres/de.systopia.osm",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        },
+        "contactmatcher": {
+            "type": "package",
+            "package": {
+                "name": "systopia/de.systopia.xcm",
+                "version": "1.7-beta3",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/systopia/de.systopia.xcm",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        },
+        "mutualaid": {
+            "type": "package",
+            "package": {
+                "name": "argopecten/de.systopia.mutualaid",
+                "version": "1.1-alpha2",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/argopecten/de.systopia.mutualaid",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        },
         "civivolunteer": {
             "type": "package",
             "package": {
@@ -188,7 +227,10 @@
         "set-extensions": [
             "mv web/sites/all/libraries/* web/sites/all/modules/contrib/civicrm/ext/",
             "cd web/sites/all/modules/contrib/civicrm/ext/nz.co.fuzion.csvimport; git checkout '1.5'",
-            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.volunteer; git checkout master"
+            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.volunteer; git checkout master",
+            "cd web/sites/all/modules/contrib/civicrm/ext/de.systopia.osm; git checkout '1.2.1'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/de.systopia.xcm; git checkout '1.7-beta3'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/de.systopia.mutualaid; git checkout master"
         ],
         "move-drush-files": [
             "cp -rl web/profiles/civicrmprofile/drush web/sites/all",
