@@ -163,12 +163,12 @@
             "type": "package",
             "package": {
                 "name": "argopecten/de.systopia.mutualaid",
-                "version": "1.1-alpha2",
+                "version": "1.1-alpha4",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/argopecten/de.systopia.mutualaid",
                     "type": "git",
-                    "reference": "master"
+                    "reference": "permission/19"
                 }
             }
         },
