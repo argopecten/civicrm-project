@@ -18,6 +18,10 @@
             "type": "vcs",
             "url":  "https://github.com/argopecten/civicrm-profile"
         },
+        "civihelp": {
+            "type": "vcs",
+            "url":  "https://github.com/argopecten/civihelp"
+        },
         "civicrm-core": {
             "type": "package",
             "package": {
