@@ -233,7 +233,7 @@
             "cd web/sites/all/modules/contrib/civicrm/ext/nz.co.fuzion.csvimport; git checkout '1.5'",
             "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.volunteer; git checkout master",
             "cd web/sites/all/modules/contrib/civicrm/ext/de.systopia.osm; git checkout '1.2.1'",
-            "cd web/sites/all/modules/contrib/civicrm/ext/de.systopia.xcm; git checkout '1.7-beta3'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/de.systopia.xcm; git checkout master",
             "cd web/sites/all/modules/contrib/civicrm/ext/de.systopia.mutualaid; git checkout 'permission/19'"
         ],
         "move-drush-files": [
