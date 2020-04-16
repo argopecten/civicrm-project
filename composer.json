@@ -188,8 +188,8 @@
         "set-extensions": [
             "mv web/sites/all/libraries/* web/sites/all/modules/contrib/civicrm/ext/",
             "cd web/sites/all/modules/contrib/civicrm/ext/nz.co.fuzion.csvimport;      git checkout '1.5'",
-            "cd web/sites/all/modules/contrib/civicrm/ext/com.agiliway.civimobileapi;  git checkout '5.0.1'",
-            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.flexmailer;      git checkout '1.1.1'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/com.agiliway.civimobileapi;  git checkout 'v5.0.1'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.flexmailer;      git checkout 'v1.1.1'",
             "cd web/sites/all/modules/contrib/civicrm/ext/uk.co.vedaconsulting.gdpr;   git checkout '2.9'",
             "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.angularprofiles; git checkout '288432a'",
             "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.contactlayout;   git checkout 'fabf4c6'",
