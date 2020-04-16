@@ -98,7 +98,7 @@
             "type": "package",
             "package": {
                 "name": "veda-consulting/uk.co.vedaconsulting.gdpr",
-                "version": "v2.8",
+                "version": "v2.9",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/veda-consulting/uk.co.vedaconsulting.gdpr",
@@ -132,6 +132,19 @@
                     "reference": "master"
                 }
             }
+        },
+        "openstreetmap": {
+            "type": "package",
+            "package": {
+                "name": "bjendres/de.systopia.osm",
+                "version": "1.2.1",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/bjendres/de.systopia.osm",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
         }
     },
     "require": {
@@ -151,7 +164,7 @@
         "drush/drush": "^8.0",
         "symfony/filesystem": "~2.7|^3",
         "webflo/drupal-finder": "^1.0.0",
-        "argopecten/civicrmprofile": "5.23.2+7.69"
+        "argopecten/civicrmprofile": "5.24.3+7.69"
     },
     "conflict": {
         "drupal/core": "8.*"
@@ -174,7 +187,13 @@
         ],
         "set-extensions": [
             "mv web/sites/all/libraries/* web/sites/all/modules/contrib/civicrm/ext/",
-            "cd web/sites/all/modules/contrib/civicrm/ext/nz.co.fuzion.csvimport; git checkout '1.5'"
+            "cd web/sites/all/modules/contrib/civicrm/ext/nz.co.fuzion.csvimport;      git checkout '1.5'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/com.agiliway.civimobileapi;  git checkout 'v5.0.1'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.flexmailer;      git checkout 'v1.1.1'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/uk.co.vedaconsulting.gdpr;   git checkout '2.9'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.angularprofiles; git checkout '288432a'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.contactlayout;   git checkout 'fabf4c6'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/de.systopia.osm;             git checkout '1.2.1'"
         ],
         "move-drush-files": [
             "cp -rl web/profiles/civicrmprofile/drush web/sites/all",
