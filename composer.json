@@ -18,14 +18,18 @@
             "type": "vcs",
             "url":  "https://github.com/argopecten/civicrm-profile"
         },
+        "civiboot": {
+            "type": "vcs",
+            "url":  "https://github.com/argopecten/civiboot"
+        },
         "civicrm-core": {
             "type": "package",
             "package": {
                 "name": "civicrm/civicrm",
-                "version": "5.23.2",
+                "version": "5.24.3",
                 "type": "drupal-module",
                 "dist": {
-                    "url": "https://download.civicrm.org/civicrm-5.23.2-drupal.tar.gz",
+                    "url": "https://download.civicrm.org/civicrm-5.24.3-drupal.tar.gz",
                     "type": "tar"
                 }
             }
@@ -34,10 +38,10 @@
             "type": "package",
             "package": {
                 "name": "civicrm/civicrm_l10n_core",
-                "version": "5.23.2",
+                "version": "5.24.3",
                 "type": "drupal-library",
                 "dist": {
-                    "url": "https://download.civicrm.org/civicrm-5.23.2-l10n.tar.gz",
+                    "url": "https://download.civicrm.org/civicrm-5.24.3-l10n.tar.gz",
                     "type": "tar"
                 }
             }
@@ -46,7 +50,7 @@
             "type": "package",
             "package": {
                 "name": "civicrm/org.civicrm.shoreditch",
-                "version": "0.1.0-alpha.36",
+                "version": "0.1.0+0e181e3",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/civicrm/org.civicrm.shoreditch",
@@ -72,7 +76,7 @@
             "type": "package",
             "package": {
                 "name": "agiliway/com.agiliway.civimobileapi",
-                "version": "v5.0.1",
+                "version": "5.0.1",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/agiliway/com.agiliway.civimobileapi",
@@ -85,7 +89,7 @@
             "type": "package",
             "package": {
                 "name": "civicrm/org.civicrm.flexmailer",
-                "version": "v1.1.1",
+                "version": "1.1.1",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/civicrm/org.civicrm.flexmailer/",
@@ -98,7 +102,7 @@
             "type": "package",
             "package": {
                 "name": "veda-consulting/uk.co.vedaconsulting.gdpr",
-                "version": "v2.8",
+                "version": "v2.9",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/veda-consulting/uk.co.vedaconsulting.gdpr",
@@ -111,7 +115,7 @@
             "type": "package",
             "package": {
                 "name": "ginkgostreet/org.civicrm.angularprofiles",
-                "version": "v4.7.31",
+                "version": "4.7.31+288432a",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/ginkgostreet/org.civicrm.angularprofiles",
@@ -124,10 +128,23 @@
             "type": "package",
             "package": {
                 "name": "civicrm/org.civicrm.contactlayout",
-                "version": "1.4.3",
+                "version": "1.4.3+fabf4c6",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/civicrm/org.civicrm.contactlayout",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        },
+        "openstreetmap": {
+            "type": "package",
+            "package": {
+                "name": "bjendres/de.systopia.osm",
+                "version": "1.2.1",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/bjendres/de.systopia.osm",
                     "type": "git",
                     "reference": "master"
                 }
@@ -151,7 +168,7 @@
         "drush/drush": "^8.0",
         "symfony/filesystem": "~2.7|^3",
         "webflo/drupal-finder": "^1.0.0",
-        "argopecten/civicrmprofile": "dev-7.x-atlo#atlo-5.23@dev"
+        "argopecten/civicrmprofile": "dev-7.x-atlo#atlo-5.24@dev"
     },
     "conflict": {
         "drupal/core": "8.*"
@@ -174,7 +191,14 @@
         ],
         "set-extensions": [
             "mv web/sites/all/libraries/* web/sites/all/modules/contrib/civicrm/ext/",
-            "cd web/sites/all/modules/contrib/civicrm/ext/nz.co.fuzion.csvimport; git checkout '1.5'"
+            "cd web/sites/all/modules/contrib/civicrm/ext/nz.co.fuzion.csvimport;      git checkout '1.5'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/com.agiliway.civimobileapi;  git checkout 'v5.0.1'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.flexmailer;      git checkout 'v1.1.1'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/uk.co.vedaconsulting.gdpr;   git checkout '2.9'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.angularprofiles; git checkout '288432a'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.contactlayout;   git checkout 'fabf4c6'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/de.systopia.osm;             git checkout '1.2.1'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.shoreditch;      git checkout '0e181e3'"
         ],
         "move-drush-files": [
             "cp -rl web/profiles/civicrmprofile/drush web/sites/all",
@@ -185,9 +209,6 @@
             "cp -r web/sites/all/libraries/civicrm_l10n_core/l10n/hu_HU/ web/sites/all/modules/contrib/civicrm/l10n",
             "cp web/sites/all/libraries/civicrm_l10n_core/sql/*.hu_HU.mysql web/sites/all/modules/contrib/civicrm/sql/",
             "rm -rf web/sites/all/libraries/civicrm_l10n_core"
-        ],
-        "theme-settings": [
-            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.shoreditch; git checkout '0.1.0-alpha.36'"
         ],
         "pre-install-cmd": [
             "CiviCRMProject\\composer\\ScriptHandler::checkComposerVersion"
@@ -203,8 +224,7 @@
             "@remove-built-in-profiles",
             "@install-l10n",
             "@move-drush-files",
-            "@set-extensions",
-            "@theme-settings"
+            "@set-extensions"
         ],
         "post-create-project-cmd": [
             "CiviCRMProject\\composer\\ScriptHandler::removeInternalFiles"
