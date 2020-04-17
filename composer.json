@@ -168,7 +168,7 @@
         "drush/drush": "^8.0",
         "symfony/filesystem": "~2.7|^3",
         "webflo/drupal-finder": "^1.0.0",
-        "argopecten/civicrmprofile": "dev-7.x-feature/common-5.24"
+        "argopecten/civicrmprofile": "5.24.3+7.69"
     },
     "conflict": {
         "drupal/core": "8.*"
