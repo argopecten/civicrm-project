@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \CiviCRMProject\composer\ScriptHandler.
+ * Contains \DrupalProject\composer\ScriptHandler.
  */
 
-namespace CiviCRMProject\composer;
+namespace DrupalProject\composer;
 
 use Composer\Script\Event;
 use Composer\Semver\Comparator;
