@@ -34,18 +34,6 @@
                 }
             }
         },
-        "l10n": {
-            "type": "package",
-            "package": {
-                "name": "civicrm/civicrm_l10n_core",
-                "version": "5.24.3",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://download.civicrm.org/civicrm-5.24.3-l10n.tar.gz",
-                    "type": "tar"
-                }
-            }
-        },
         "shoreditch": {
             "type": "package",
             "package": {
@@ -168,7 +156,7 @@
         "drush/drush": "^8.0",
         "symfony/filesystem": "~2.7|^3",
         "webflo/drupal-finder": "^1.0.0",
-        "argopecten/civicrmprofile": "5.24.3+7.69"
+        "argopecten/civicrmprofile": "dev-7.x-feature/common-l10n"
     },
     "conflict": {
         "drupal/core": "8.*"
@@ -205,10 +193,6 @@
             "rm -rf web/profiles/civicrmprofile/drush"
         ],
         "install-l10n": [
-            "mkdir -p web/sites/all/modules/contrib/civicrm/l10n",
-            "cp -r web/sites/all/libraries/civicrm_l10n_core/l10n/hu_HU/ web/sites/all/modules/contrib/civicrm/l10n",
-            "cp web/sites/all/libraries/civicrm_l10n_core/sql/*.hu_HU.mysql web/sites/all/modules/contrib/civicrm/sql/",
-            "rm -rf web/sites/all/libraries/civicrm_l10n_core"
         ],
         "pre-install-cmd": [
             "CiviCRMProject\\composer\\ScriptHandler::checkComposerVersion"
@@ -231,6 +215,10 @@
         ]
     },
     "extra": {
+        "drupal-l10n": {
+            "destination": "web/sites/all/translations/contrib/civicrm/l10n",
+            "languages": ["hu"]
+        },
         "installer-paths": {
             "web/": ["type:drupal-core"],
             "web/profiles/{$name}/": ["type:drupal-profile"],
