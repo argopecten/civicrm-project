@@ -195,6 +195,7 @@
         "install-l10n": [
             "wget -O /tmp/l10n.tar.gz https://download.civicrm.org/civicrm-5.24.3-l10n.tar.gz",
             "tar -xzf /tmp/l10n.tar.gz -C /tmp",
+            "mkdir -p web/profiles/civicrmprofile/translations/contrib/civicrm/l10n",
             "cp -r /tmp/civicrm/l10n/hu_HU/ web/profiles/civicrmprofile/translations/contrib/civicrm/l10n",
             "cp /tmp/civicrm/sql/*.hu_HU.mysql web/sites/all/modules/contrib/civicrm/sql/",
             "rm -rf /tmp/l10n.tar.gz /tmp/civicrm"
