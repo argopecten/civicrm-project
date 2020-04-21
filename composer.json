@@ -221,7 +221,7 @@
     },
     "extra": {
         "drupal-l10n": {
-            "destination": "profiles/civicrmprofile/translations/contrib/civicrm/l10n",
+            "destination": "profiles/civicrmprofile/translations",
             "languages": ["hu"]
         },
         "installer-paths": {
