@@ -137,45 +137,6 @@
                     "reference": "master"
                 }
             }
-        },
-        "contactmatcher": {
-            "type": "package",
-            "package": {
-                "name": "systopia/de.systopia.xcm",
-                "version": "1.7",
-                "type": "drupal-library",
-                "source": {
-                    "url": "https://github.com/systopia/de.systopia.xcm",
-                    "type": "git",
-                    "reference": "master"
-                }
-            }
-        },
-        "mutualaid": {
-            "type": "package",
-            "package": {
-                "name": "argopecten/de.systopia.mutualaid",
-                "version": "1.1",
-                "type": "drupal-library",
-                "source": {
-                    "url": "https://github.com/argopecten/de.systopia.mutualaid",
-                    "type": "git",
-                    "reference": "master"
-                }
-            }
-        },
-        "civivolunteer": {
-            "type": "package",
-            "package": {
-                "name": "civicrm/org.civicrm.volunteer",
-                "version": "4.7.31",
-                "type": "drupal-library",
-                "source": {
-                    "url": "https://github.com/civicrm/org.civicrm.volunteer",
-                    "type": "git",
-                    "reference": "master"
-                }
-            }
         }
     },
     "require": {
@@ -195,7 +156,7 @@
         "drush/drush": "^8.0",
         "symfony/filesystem": "~2.7|^3",
         "webflo/drupal-finder": "^1.0.0",
-        "argopecten/civicrmprofile": "dev-7.x-help-l10n"
+        "argopecten/civicrmprofile": "dev-7.x-help-5.25"
     },
     "conflict": {
         "drupal/core": "8.*"
