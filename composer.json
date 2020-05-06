@@ -143,7 +143,7 @@
           "type": "package",
           "package": {
               "name": "veda-consulting/uk.co.vedaconsulting.mailchimp",
-              "version": "2.1+124083b",
+              "version": "2.1",
               "type": "drupal-library",
               "source": {
                   "url": "https://github.com/veda-consulting/uk.co.vedaconsulting.mailchimp",
