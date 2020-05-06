@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # download & unzp l10n tar file
-wget -O /tmp/l10n.tar.gz https://download.civicrm.org/civicrm-5.24.3-l10n.tar.gz
+wget -O /tmp/l10n.tar.gz https://download.civicrm.org/civicrm-5.24.6-l10n.tar.gz
 tar -xzf /tmp/l10n.tar.gz -C /tmp
 
 # copy language file
