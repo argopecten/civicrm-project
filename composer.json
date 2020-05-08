@@ -138,7 +138,7 @@
                 }
             }
           },
-          "contactmatcher": {
+        "contactmatcher": {
               "type": "package",
               "package": {
                   "name": "systopia/de.systopia.xcm",
@@ -151,7 +151,7 @@
                   }
               }
           },
-          "mutualaid": {
+        "mutualaid": {
               "type": "package",
               "package": {
                   "name": "argopecten/de.systopia.mutualaid",
@@ -163,20 +163,7 @@
                       "reference": "master"
                   }
               }
-          },
-          "civivolunteer": {
-              "type": "package",
-              "package": {
-                  "name": "civicrm/org.civicrm.volunteer",
-                  "version": "4.7.31",
-                  "type": "drupal-library",
-                  "source": {
-                      "url": "https://github.com/civicrm/org.civicrm.volunteer",
-                      "type": "git",
-                      "reference": "master"
-                  }
-              }
-        }
+          }
     },
     "require": {
         "php": "7.2.* || 7.3.*",
@@ -226,7 +213,6 @@
             "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.contactlayout;   git checkout 'fabf4c6'",
             "cd web/sites/all/modules/contrib/civicrm/ext/de.systopia.osm;             git checkout '1.2.1'",
             "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.shoreditch;      git checkout '0e181e3'",
-            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.volunteer;       git checkout 'b8096a3'",
             "cd web/sites/all/modules/contrib/civicrm/ext/de.systopia.xcm;             git checkout '63f5fb1'",
             "cd web/sites/all/modules/contrib/civicrm/ext/de.systopia.mutualaid;       git checkout '5472f58'"
         ],
