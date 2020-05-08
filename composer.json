@@ -214,7 +214,7 @@
             "cd web/sites/all/modules/contrib/civicrm/ext/de.systopia.osm;             git checkout '1.2.1'",
             "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.shoreditch;      git checkout '0e181e3'",
             "cd web/sites/all/modules/contrib/civicrm/ext/de.systopia.xcm;             git checkout '63f5fb1'",
-            "cd web/sites/all/modules/contrib/civicrm/ext/de.systopia.mutualaid;       git checkout '5472f58'"
+            "cd web/sites/all/modules/contrib/civicrm/ext/de.systopia.mutualaid;       git checkout '9acab10'"
         ],
         "move-drush-files": [
             "cp -rl web/profiles/civicrmprofile/drush web/sites/all",
