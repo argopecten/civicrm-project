@@ -26,10 +26,10 @@
             "type": "package",
             "package": {
                 "name": "civicrm/civicrm",
-                "version": "5.24.6",
+                "version": "5.25.0",
                 "type": "drupal-module",
                 "dist": {
-                    "url": "https://download.civicrm.org/civicrm-5.24.6-drupal.tar.gz",
+                    "url": "https://download.civicrm.org/civicrm-5.25.0-drupal.tar.gz",
                     "type": "tar"
                 }
             }
@@ -137,19 +137,6 @@
                     "reference": "master"
                 }
             }
-        },
-        "mailchimp": {
-            "type": "package",
-            "package": {
-                "name": "veda-consulting/uk.co.vedaconsulting.mailchimp",
-                "version": "2.0.1+124083b",
-                "type": "drupal-library",
-                "source": {
-                    "url": "https://github.com/veda-consulting/uk.co.vedaconsulting.mailchimp",
-                    "type": "git",
-                    "reference": "master"
-                }
-            }
         }
     },
     "require": {
@@ -169,7 +156,7 @@
         "drush/drush": "^8.0",
         "symfony/filesystem": "~2.7|^3",
         "webflo/drupal-finder": "^1.0.0",
-        "argopecten/civicrmprofile": "dev-7.x-atlo-5.25"
+        "argopecten/civicrmprofile": "dev-7.x-atlo#a3dc6a1"
     },
     "conflict": {
         "drupal/core": "8.*"
