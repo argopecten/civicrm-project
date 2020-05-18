@@ -26,10 +26,10 @@
             "type": "package",
             "package": {
                 "name": "civicrm/civicrm",
-                "version": "5.24.3",
+                "version": "5.25.0",
                 "type": "drupal-module",
                 "dist": {
-                    "url": "https://download.civicrm.org/civicrm-5.24.3-drupal.tar.gz",
+                    "url": "https://download.civicrm.org/civicrm-5.25.0-drupal.tar.gz",
                     "type": "tar"
                 }
             }
@@ -38,7 +38,7 @@
             "type": "package",
             "package": {
                 "name": "civicrm/org.civicrm.shoreditch",
-                "version": "0.1.0+0e181e3",
+                "version": "0.1.0+e52d5b8",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/civicrm/org.civicrm.shoreditch",
@@ -77,7 +77,7 @@
             "type": "package",
             "package": {
                 "name": "agiliway/com.agiliway.civimobileapi",
-                "version": "5.0.1",
+                "version": "5.1.0",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/agiliway/com.agiliway.civimobileapi",
@@ -169,7 +169,7 @@
         "drush/drush": "^8.0",
         "symfony/filesystem": "~2.7|^3",
         "webflo/drupal-finder": "^1.0.0",
-        "argopecten/civicrmprofile": "dev-7.x-lemp-l10n"
+        "argopecten/civicrmprofile": "dev-7.x-lemp#32a3e82"
     },
     "conflict": {
         "drupal/core": "8.*"
@@ -194,13 +194,13 @@
             "mv web/sites/all/libraries/* web/sites/all/modules/contrib/civicrm/ext/",
             "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.sms.clickatell;  git checkout unicode",
             "cd web/sites/all/modules/contrib/civicrm/ext/nz.co.fuzion.csvimport;      git checkout '1.5'",
-            "cd web/sites/all/modules/contrib/civicrm/ext/com.agiliway.civimobileapi;  git checkout 'v5.0.1'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/com.agiliway.civimobileapi;  git checkout 'v5.1.0'",
             "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.flexmailer;      git checkout 'v1.1.1'",
             "cd web/sites/all/modules/contrib/civicrm/ext/uk.co.vedaconsulting.gdpr;   git checkout '2.9'",
             "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.angularprofiles; git checkout '288432a'",
             "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.contactlayout;   git checkout 'fabf4c6'",
             "cd web/sites/all/modules/contrib/civicrm/ext/de.systopia.osm;             git checkout '1.2.1'",
-            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.shoreditch;      git checkout '0e181e3'"
+            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.shoreditch;      git checkout 'e52d5b8'"
         ],
         "move-drush-files": [
             "cp -rl web/profiles/civicrmprofile/drush web/sites/all",
