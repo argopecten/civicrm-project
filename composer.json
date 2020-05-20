@@ -137,6 +137,19 @@
                     "reference": "master"
                 }
             }
+        },
+        "mailchimp": {
+            "type": "package",
+            "package": {
+                "name": "veda-consulting/uk.co.vedaconsulting.mailchimp",
+                "version": "2.0.1+124083b",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/veda-consulting/uk.co.vedaconsulting.mailchimp",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
         }
     },
     "require": {
