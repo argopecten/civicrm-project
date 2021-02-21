@@ -1,82 +1,141 @@
 {
-    "name": "drupal-composer/drupal-project",
-    "description": "Project template for Drupal 8 projects with composer",
-    "type": "project",
-    "license": "GPL-2.0-or-later",
-    "authors": [
-        {
-            "name": "",
-            "role": ""
-        }
+  "name": "argopecten/civicrm-project",
+  "description": "CiviCRM project on Drupal 8 projects with composer following drupal/drupal layout",
+  "type": "project",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://civicrm.org/",
+  "support": {
+      "docs": "https://docs.civicrm.org/installation/en/latest/drupal8/"
+  },
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  },
+  "require": {
+    "php": ">=7.2.0",
+    "composer/installers": "^1.2",
+    "cweagans/composer-patches": "^1.6.5",
+    "drush/drush": "^9.0.0",
+    "vlucas/phpdotenv": "^2.4",
+    "webflo/drupal-finder": "^1.0.0",
+    "webmozart/path-util": "^2.3",
+    "zaporylie/composer-drupal-optimizations": "^1.0",
+    "civicrm/civicrm-asset-plugin": "~1.1",
+    "civicrm/civicrm-core": "~5.29",
+    "civicrm/civicrm-drupal-8": "~5.29",
+    "civicrm/civicrm-packages": "~5.29",
+    "composer/installers": "^1.2",
+    "drupal/core-composer-scaffold": "^8.8",
+    "drupal/core-project-message": "^8.8",
+    "drupal/core-recommended": "^8.8",
+    "drupal/core-vendor-hardening": "^8.8",
+    "drupal/admin_toolbar": "3.0",
+    "drupal/ctools": "^3.4",
+    "drupal/entity": "1.2",
+    "drupal/panels": "4.6",
+    "drupal/webform": "6.0",
+    "drupal/webform_civicrm": "5.0-beta5",
+    "drupal/tfa": "1.0-alpha7",
+    "drupal/role_delegation": "1.1",
+    "drupal/rules": "3.0-alpha6"
+  },
+  "require-dev": {
+    "webflo/drupal-core-require-dev": "^8.7.0"
+  },
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true
+  },
+  "autoload": {
+    "classmap": ["scripts/composer/ScriptHandler.php"],
+    "files": ["load.environment.php"]
+  },
+  "scripts": {
+    "pre-install-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
     ],
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        }
+    "pre-update-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
     ],
-    "require": {
-        "php": ">=7.0.8",
-        "composer/installers": "^1.2",
-        "cweagans/composer-patches": "^1.6.5",
-        "drupal-composer/drupal-scaffold": "^2.5",
-        "drupal/console": "^1.0.2",
-        "drupal/core": "^8.7.0",
-        "drush/drush": "^9.0.0",
-        "vlucas/phpdotenv": "^2.4",
-        "webflo/drupal-finder": "^1.0.0",
-        "webmozart/path-util": "^2.3",
-        "zaporylie/composer-drupal-optimizations": "^1.0"
+    "post-install-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+    ],
+    "post-update-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+    ]
+  },
+  "extra": {
+    "composer-exit-on-patch-failure": true,
+    "enable-patching": "true",
+    "compile-whitelist": ["civicrm/civicrm-core", "civicrm/composer-compile-lib"],
+    "patchLevel": {"drupal/core": "-p2"},
+    "installer-paths": {
+      "core": ["type:drupal-core"],
+      "libraries/{$name}": ["type:drupal-library"],
+      "modules/contrib/{$name}": ["type:drupal-module"],
+      "profiles/contrib/{$name}": ["type:drupal-profile"],
+      "themes/contrib/{$name}": ["type:drupal-theme"],
+      "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+      "modules/custom/{$name}": ["type:drupal-custom-module"],
+      "themes/custom/{$name}": ["type:drupal-custom-theme"]
     },
-    "require-dev": {
-        "webflo/drupal-core-require-dev": "^8.7.0"
+    "downloads": {
+      "shoreditch": {
+        "version": "1.0.0-beta.4",
+        "path": "vendor/civicrm/civicrm-core/ext/shoreditch",
+        "url": "https://github.com/civicrm/org.civicrm.shoreditch/archive/{$version}.zip"
+      },
+      "angular-profiles": {
+        "version": "5.23",
+        "path": "vendor/civicrm/civicrm-core/ext/angular-profiles",
+        "url": "https://github.com/ginkgostreet/org.civicrm.angularprofiles/archive/v{$version}-1.2.0.zip"
+      },
+      "contactlayout": {
+        "version": "1.8.1",
+        "path": "vendor/civicrm/civicrm-core/ext/contactlayout",
+        "url": "https://github.com/civicrm/org.civicrm.contactlayout/archive/{$version}.zip"
+      },
+      "csvimport": {
+        "version": "1.5",
+        "path": "vendor/civicrm/civicrm-core/ext/csvimport",
+        "url": "https://github.com/eileenmcnaughton/nz.co.fuzion.csvimport/archive/{$version}.zip"
+      },
+      "openstreetmap": {
+        "version": "1.3",
+        "path": "vendor/civicrm/civicrm-core/ext/openstreetmap",
+        "url": "https://github.com/systopia/de.systopia.osm/archive/{$version}.zip"
+      },
+      "uk.co.vedaconsulting.gdpr": {
+        "version": "2.9",
+        "url": "https://github.com/veda-consulting-company/uk.co.vedaconsulting.gdpr/archive/{$version}.zip",
+        "path": "vendor/civicrm/civicrm-core/ext/vedaconsulting.gdpr"
+      },
+      "uk.co.vedaconsulting.mailchimp": {
+        "version": "2.0.1",
+        "url": "https://github.com/veda-consulting-company/uk.co.vedaconsulting.mailchimp/archive/v{$version}.zip",
+        "path": "vendor/civicrm/civicrm-core/ext/vedaconsulting.mailchimp"
+      }
+     },
+    "drupal-scaffold": {
+        "initial": {
+            ".editorconfig": "../.editorconfig",
+            ".gitattributes": "../.gitattributes"
+        },
+        "locations": {
+            "web-root": "./"
+        }
     },
-    "conflict": {
-        "drupal/drupal": "*"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "config": {
-        "sort-packages": true
-    },
-    "autoload": {
-        "classmap": [
-            "scripts/composer/ScriptHandler.php"
-        ],
-        "files": ["load.environment.php"]
-    },
-    "scripts": {
-        "pre-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-        ],
-        "pre-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-        ],
-        "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+    "drupal-core-project-message": {
+        "include-keys": [
+            "homepage",
+            "support"
         ]
     },
-    "extra": {
-        "composer-exit-on-patch-failure": true,
-        "patchLevel": {
-            "drupal/core": "-p2"
-        },
-        "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/Commands/contrib/{$name}": ["type:drupal-drush"]
-        },
-        "drupal-scaffold": {
-            "initial": {
-                ".editorconfig": "../.editorconfig",
-                ".gitattributes": "../.gitattributes"
-            }
-        }
-    }
+  }
 }
