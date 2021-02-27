@@ -35,11 +35,11 @@
     "drupal/ctools": "^3.4",
     "drupal/entity": "1.2",
     "drupal/panels": "4.6",
-    "drupal/webform": "6.0",
-    "drupal/webform_civicrm": "5.0-beta5",
-    "drupal/tfa": "1.0-alpha7",
     "drupal/role_delegation": "1.1",
-    "drupal/rules": "3.0-alpha6"
+    "drupal/rules": "3.0-alpha6",
+    "drupal/tfa": "1.0-alpha7",
+    "drupal/webform": "6.0",
+    "drupal/webform_civicrm": "5.0-beta5"
   },
   "require-dev": {
     "webflo/drupal-core-require-dev": "^8.7.0"
@@ -136,6 +136,6 @@
             "homepage",
             "support"
         ]
-    },
+    }
   }
 }
