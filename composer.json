@@ -76,14 +76,14 @@
     "compile-whitelist": ["civicrm/civicrm-core", "civicrm/composer-compile-lib"],
     "patchLevel": {"drupal/core": "-p2"},
     "installer-paths": {
-      "core": ["type:drupal-core"],
-      "libraries/{$name}": ["type:drupal-library"],
-      "modules/contrib/{$name}": ["type:drupal-module"],
-      "profiles/contrib/{$name}": ["type:drupal-profile"],
-      "themes/contrib/{$name}": ["type:drupal-theme"],
+      "web": ["type:drupal-core"],
+      "web/sites/all/libraries/{$name}": ["type:drupal-library"],
+      "web/sites/all/modules/contrib/{$name}": ["type:drupal-module"],
+      "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+      "web/sites/all/themes/contrib/{$name}": ["type:drupal-theme"],
       "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
-      "modules/custom/{$name}": ["type:drupal-custom-module"],
-      "themes/custom/{$name}": ["type:drupal-custom-theme"]
+      "web/sites/all/modules/custom/{$name}": ["type:drupal-custom-module"],
+      "web/sites/all/themes/custom/{$name}": ["type:drupal-custom-theme"]
     },
     "downloads": {
       "shoreditch": {
