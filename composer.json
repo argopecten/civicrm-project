@@ -20,9 +20,12 @@
         "civicrm/civicrm-drupal-8": "5.35",
         "civicrm/civicrm-packages": "5.35",
         "composer/installers": "^1.2",
+        "drupal/civicrm_entity": "^3.0@beta",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-recommended": "8.9.13",
         "drupal/core-vendor-hardening": "8.9.13",
+        "drupal/ga_login": "^1.0@alpha",
+        "drupal/webform_civicrm": "dev-5.x#908e59a7",
         "drush/drush": "^8.4.6"
     },
     "conflict": {
