@@ -112,7 +112,7 @@
         "enable-patching": "true",
         "compile-whitelist": ["civicrm/civicrm-core", "civicrm/composer-compile-lib"],
         "drupal-l10n": {
-            "destination": "profiles/standard/translations",
+            "destination": "web/core/profiles/standard/translations",
             "languages": ["hu"]
         }
     }
