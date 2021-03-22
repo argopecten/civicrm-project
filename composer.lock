@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "68a6a4f0ef2e4b062a76b707b24c085c",
+    "content-hash": "45ecabdf61167778ad3e010c0ca923bd",
     "packages": [
         {
             "name": "adrienrn/php-mimetyper",
@@ -2502,6 +2502,48 @@
             "time": "2020-08-30T22:54:22+00:00"
         },
         {
+            "name": "drupal-composer/drupal-l10n",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drupal-composer/drupal-l10n.git",
+                "reference": "9eb8b81e4426a510eb15d35504d28b5f9e5d11d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drupal-composer/drupal-l10n/zipball/9eb8b81e4426a510eb15d35504d28b5f9e5d11d1",
+                "reference": "9eb8b81e4426a510eb15d35504d28b5f9e5d11d1",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^2.0",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "composer/composer": "~2.0",
+                "phpunit/phpunit": "<10"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "DrupalComposer\\DrupalL10n\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "DrupalComposer\\DrupalL10n\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Composer Plugin for downloading Drupal translation files",
+            "support": {
+                "issues": "https://github.com/drupal-composer/drupal-l10n/issues",
+                "source": "https://github.com/drupal-composer/drupal-l10n/tree/2.0.2"
+            },
+            "time": "2021-02-21T18:05:22+00:00"
+        },
+        {
             "name": "drupal/bootstrap4",
             "version": "2.1.5",
             "source": {
@@ -3450,8 +3492,8 @@
                     "dev-5.x": "5.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-5.0-beta5+12-dev",
-                    "datestamp": "1613918778",
+                    "version": "8.x-5.0-beta5+82-dev",
+                    "datestamp": "1616373362",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -3489,16 +3531,16 @@
         },
         {
             "name": "drush/drush",
-            "version": "8.4.7",
+            "version": "8.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "21d83b2dc79182f9a82964aea8fe39e0d385c7a3"
+                "reference": "b377b1896e344085d06bdbf671a465950a164d1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/21d83b2dc79182f9a82964aea8fe39e0d385c7a3",
-                "reference": "21d83b2dc79182f9a82964aea8fe39e0d385c7a3",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/b377b1896e344085d06bdbf671a465950a164d1e",
+                "reference": "b377b1896e344085d06bdbf671a465950a164d1e",
                 "shasum": ""
             },
             "require": {
@@ -3603,7 +3645,7 @@
                 "forum": "http://drupal.stackexchange.com/questions/tagged/drush",
                 "irc": "irc://irc.freenode.org/drush",
                 "issues": "https://github.com/drush-ops/drush/issues",
-                "source": "https://github.com/drush-ops/drush/tree/8.4.7"
+                "source": "https://github.com/drush-ops/drush/tree/8.4.8"
             },
             "funding": [
                 {
@@ -3611,7 +3653,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-19T23:12:41+00:00"
+            "time": "2021-03-22T15:27:55+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
