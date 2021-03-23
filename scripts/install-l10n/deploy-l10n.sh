@@ -20,7 +20,7 @@ cp /tmp/civicrm/sql/*.hu_HU.mysql vendor/civicrm/civicrm-core/sql/
 cp -rl scripts/install-l10n/settings.default.json vendor/civicrm/civicrm-core/l10n/hu_HU
 
 # define CIVICRM_L10N_BASEDIR environmental variable as platform settings in Aegir
-cp -rl scripts/install-l10n/platform.settings.php web/sites/all
+cp -rl scripts/install-l10n/platform.settings.php web/sites/all/
 sed -i "s/PLATFORM_DIR/$(basename $PWD)/g" web/sites/all/platform.settings.php
 
 # clean up
