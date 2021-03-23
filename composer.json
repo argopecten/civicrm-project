@@ -87,7 +87,7 @@
             "rm -rf web/core/profiles/nightwatch_*",
             "rm -rf web/core/profiles/testin*"
         ],
-        "post-update-cmd": [
+        "post-install-cmd": [
             "@remove-built-in-profiles",
             "bash scripts/install-l10n/deploy-l10n.sh 5.35.0"
         ]
