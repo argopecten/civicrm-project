@@ -69,6 +69,7 @@
         "drupal/core-recommended": "8.9.13",
         "drupal/core-vendor-hardening": "8.9.13",
         "drupal/ga_login": "^1.0@alpha",
+        "drupal/real_aes": "^2.3",
         "drupal/webform_civicrm": "dev-5.x#908e59a7",
         "drush/drush": "^8.4.6"
     },
