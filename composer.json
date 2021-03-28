@@ -48,7 +48,7 @@
                 "source": {
                     "url": "https://github.com/civicrm/org.civicrm.shoreditch",
                     "type": "git",
-                    "reference": "0247cef0"
+                    "reference": "1.0.0-beta.5"
                 }
             }
         }
@@ -56,9 +56,9 @@
     "require": {
         "artfulrobot/aah": "0.0.1",
         "civicrm/civicrm-asset-plugin": "~1.1",
-        "civicrm/civicrm-core": "5.35",
-        "civicrm/civicrm-drupal-8": "5.35",
-        "civicrm/civicrm-packages": "5.35",
+        "civicrm/civicrm-core": "~5.35.0",
+        "civicrm/civicrm-drupal-8": "~5.35.0",
+        "civicrm/civicrm-packages": "~5.35.0",
         "civicrm/haystacktheme": "5.31",
         "civicrm/org.civicrm.shoreditch": "1.0.1",
         "composer/installers": "^1.2",
@@ -66,11 +66,11 @@
         "drupal/bootstrap4": "^2.1",
         "drupal/civicrm_entity": "^3.0@beta",
         "drupal/core-composer-scaffold": "^8.8",
-        "drupal/core-recommended": "8.9.13",
-        "drupal/core-vendor-hardening": "8.9.13",
+        "drupal/core-recommended": "~8.9.13",
+        "drupal/core-vendor-hardening": "~8.9.13",
         "drupal/ga_login": "^1.0@alpha",
         "drupal/real_aes": "^2.3",
-        "drupal/webform_civicrm": "dev-5.x#908e59a7",
+        "drupal/webform_civicrm": "^5.0@beta",
         "drush/drush": "^8.4.6"
     },
     "conflict": {
