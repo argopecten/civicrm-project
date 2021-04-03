@@ -1,13 +1,8 @@
 {
-    "name": "argopecten/drupal-project",
-    "description": "Project template for Aegir with Drupal 8/9 having relocated document root",
+    "name": "argopecten/civicrm-project",
+    "description": "Composer project template for CiviCRM with Drupal 8/9 in Aegir, with relocated document root",
     "type": "project",
     "license": "GPL-2.0-or-later",
-    "homepage": "https://www.drupal.org/project/drupal",
-    "support": {
-        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
-        "chat": "https://www.drupal.org/node/314178"
-    },
     "repositories": {
         "drupal8": {
             "type": "composer",
@@ -61,9 +56,9 @@
         "civicrm/civicrm-packages": "~5.35.0",
         "civicrm/haystacktheme": "5.31",
         "civicrm/org.civicrm.shoreditch": "1.0.1",
-        "composer/installers": "^1.2",
+        "composer/installers": "^1.10",
         "drupal-composer/drupal-l10n": "^2.0",
-        "drupal/bootstrap4": "^2.1",
+        "drupal/bootstrap4": "~2.1.6",
         "drupal/civicrm_entity": "^3.0@beta",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-recommended": "~8.9.13",
@@ -115,6 +110,44 @@
         "drupal-l10n": {
             "destination": "core/profiles/standard/translations",
             "languages": ["hu"]
+        },
+        "drupal-core-vendor-hardening": {
+            "civicrm/civicrm-asset-plugin": ["tests"],
+            "civicrm/civicrm-core": ["tests"],
+            "civicrm/civicrm-cxn-rpc": ["tests", "doc"],
+            "civicrm/composer-compile-plugin": ["tests", "doc"],
+            "civicrm/composer-downloads-plugin": ["tests"],
+            "chillerlan/php-qrcode": ["tests", "docs", "examples"],
+            "chillerlan/php-settings-container": ["tests", "examples"],
+            "christian-riesen/otp": ["tests", "example"],
+            "cweagans/composer-patches": ["tests"],
+            "defuse/php-encryption": ["docs", "dist"],
+            "dflydev/apache-mime-types": ["tests"],
+            "dflydev/dot-access-data": ["tests"],
+            "doctrine/lexer": ["docs", "tests"],
+            "drush/drush": ["docs", "examples", "tests"],
+            "electrolinux/phpquery": ["test-cases", "unit-tests", "api-reference"],
+            "marcj/topsort": ["tests"],
+            "padaliyajay/php-autoprefixer": ["test"],
+            "paragonie/constant_time_encoding": ["tests"],
+            "pear/console_table": ["test"],
+            "pear/log": ["docs", "exmaples", "tests"],
+            "pear/mail": ["tests"],
+            "pear/validate_finance_creditcard": ["docs", "tests"],
+            "phenx/php-font-lib": ["sample-fonts", "tests"],
+            "phenx/php-svg-lib": ["tests"],
+            "phpoffice/common": ["tests"],
+            "sabberworm/php-css-parser": ["tests"],
+            "tecnickcom/tcpdf": ["examples"],
+            "totten/ca-config": ["tests"],
+            "totten/lurkerlite": ["tests"],
+            "tplaner/when": ["tests"],
+            "tubalmartin/cssmin": ["tests"],
+            "webflo/drupal-finder": ["tests"],
+            "webmozart/path-util": ["tests", "docs"],
+            "xkerman/restricted-unserialize": ["test", "docker"],
+            "zetacomponents/base": ["design", "docs", "tests"],
+            "zetacomponents/mail": ["design", "docs","tests"]
         }
     }
 }
