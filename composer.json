@@ -12,12 +12,12 @@
             "type": "package",
             "package": {
                 "name": "artfulrobot/aah",
-                "version": "0.0.1",
+                "version": "0.0.2",
                 "type": "civicrm-ext",
                 "source": {
                     "url": "https://github.com/artfulrobot/aah",
                     "type": "git",
-                    "reference": "c6337c24"
+                    "reference": "44dbf911"
                 }
             }
         },
@@ -38,35 +38,34 @@
             "type": "package",
             "package": {
                 "name": "civicrm/org.civicrm.shoreditch",
-                "version": "1.0.1",
+                "version": "1.0.2",
                 "type": "civicrm-ext",
                 "source": {
                     "url": "https://github.com/civicrm/org.civicrm.shoreditch",
                     "type": "git",
-                    "reference": "1.0.0-beta.5"
+                    "reference": "ecab4cf2"
                 }
             }
         }
     },
     "require": {
-        "artfulrobot/aah": "0.0.1",
+        "artfulrobot/aah": "0.0.2",
         "civicrm/civicrm-asset-plugin": "~1.1",
-        "civicrm/civicrm-core": "~5.35.0",
-        "civicrm/civicrm-drupal-8": "~5.35.0",
-        "civicrm/civicrm-packages": "~5.35.0",
+        "civicrm/civicrm-core": "~5.36.0",
+        "civicrm/civicrm-drupal-8": "~5.36.0",
+        "civicrm/civicrm-packages": "~5.36.0",
         "civicrm/haystacktheme": "5.31",
-        "civicrm/org.civicrm.shoreditch": "1.0.1",
+        "civicrm/org.civicrm.shoreditch": "1.0.2",
         "composer/installers": "^1.10",
         "drupal-composer/drupal-l10n": "^2.0",
         "drupal/bootstrap4": "~2.1.6",
         "drupal/civicrm_entity": "^3.0@beta",
         "drupal/core-composer-scaffold": "^8.8",
-        "drupal/core-recommended": "~8.9.13",
-        "drupal/core-vendor-hardening": "~8.9.13",
+        "drupal/core-recommended": "~8.9.14",
+        "drupal/core-vendor-hardening": "~8.9.14",
         "drupal/ga_login": "^1.0@alpha",
         "drupal/real_aes": "^2.3",
-        "drupal/webform_civicrm": "^5.0@beta",
-        "drush/drush": "^8.4.6"
+        "drush/drush": "^8.4.8"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -85,7 +84,7 @@
         ],
         "post-install-cmd": [
             "@remove-built-in-profiles",
-            "bash scripts/install-l10n/deploy-l10n.sh 5.35.0"
+            "bash scripts/install-l10n/deploy-l10n.sh 5.36.0"
         ]
     },
     "extra": {
