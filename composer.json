@@ -26,10 +26,10 @@
             "type": "package",
             "package": {
                 "name": "civicrm/civicrm",
-                "version": "5.25.0",
+                "version": "5.36.1",
                 "type": "drupal-module",
                 "dist": {
-                    "url": "https://download.civicrm.org/civicrm-5.25.0-drupal.tar.gz",
+                    "url": "https://download.civicrm.org/civicrm-5.36.1-drupal.tar.gz",
                     "type": "tar"
                 }
             }
@@ -38,7 +38,7 @@
             "type": "package",
             "package": {
                 "name": "civicrm/org.civicrm.shoreditch",
-                "version": "0.1.0+e52d5b8",
+                "version": "1.0.0-beta.6",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/civicrm/org.civicrm.shoreditch",
@@ -60,37 +60,11 @@
                 }
             }
         },
-        "civimobileapi": {
-            "type": "package",
-            "package": {
-                "name": "agiliway/com.agiliway.civimobileapi",
-                "version": "5.1.0",
-                "type": "drupal-library",
-                "source": {
-                    "url": "https://github.com/agiliway/com.agiliway.civimobileapi",
-                    "type": "git",
-                    "reference": "master"
-                }
-            }
-        },
-        "flexmailer": {
-            "type": "package",
-            "package": {
-                "name": "civicrm/org.civicrm.flexmailer",
-                "version": "1.1.1",
-                "type": "drupal-library",
-                "source": {
-                    "url": "https://github.com/civicrm/org.civicrm.flexmailer/",
-                    "type": "git",
-                    "reference": "master"
-                }
-            }
-        },
         "gdpr": {
             "type": "package",
             "package": {
                 "name": "veda-consulting/uk.co.vedaconsulting.gdpr",
-                "version": "v2.9",
+                "version": "3.1",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/veda-consulting/uk.co.vedaconsulting.gdpr",
@@ -103,10 +77,10 @@
             "type": "package",
             "package": {
                 "name": "ginkgostreet/org.civicrm.angularprofiles",
-                "version": "4.7.31+288432a",
+                "version": "1.2.2",
                 "type": "drupal-library",
                 "source": {
-                    "url": "https://github.com/ginkgostreet/org.civicrm.angularprofiles",
+                    "url": "https://lab.civicrm.org/extensions/angularprofiles",
                     "type": "git",
                     "reference": "master"
                 }
@@ -116,7 +90,7 @@
             "type": "package",
             "package": {
                 "name": "civicrm/org.civicrm.contactlayout",
-                "version": "1.4.3+fabf4c6",
+                "version": "1.9.0",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/civicrm/org.civicrm.contactlayout",
@@ -129,7 +103,7 @@
             "type": "package",
             "package": {
                 "name": "bjendres/de.systopia.osm",
-                "version": "1.2.1",
+                "version": "1.3.0",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/bjendres/de.systopia.osm",
@@ -140,7 +114,7 @@
         }
     },
     "require": {
-        "php": "7.2.* || 7.3.*",
+        "php": "7.2.* || 7.3.* || 7.4.*",
         "ext-curl": "*",
         "ext-gd": "*",
         "ext-json": "*",
@@ -152,11 +126,11 @@
         "cweagans/composer-patches": "^1.6.5",
         "drupal-composer/preserve-paths": "^0.1",
         "drupal/composer_autoloader": "^1.0",
-        "drupal/drupal": "^7.69",
+        "drupal/drupal": "^7.80",
         "drush/drush": "^8.0",
         "symfony/filesystem": "~2.7|^3",
         "webflo/drupal-finder": "^1.0.0",
-        "argopecten/civicrmprofile": "5.25.0+7.69"
+        "argopecten/civicrmprofile": "7.x-proba"
     },
     "conflict": {
         "drupal/core": "8.*"
@@ -179,14 +153,12 @@
         ],
         "set-extensions": [
             "mv web/sites/all/libraries/* web/sites/all/modules/contrib/civicrm/ext/",
-            "cd web/sites/all/modules/contrib/civicrm/ext/nz.co.fuzion.csvimport;      git checkout '1.5'",
-            "cd web/sites/all/modules/contrib/civicrm/ext/com.agiliway.civimobileapi;  git checkout 'v5.1.0'",
-            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.flexmailer;      git checkout 'v1.1.1'",
-            "cd web/sites/all/modules/contrib/civicrm/ext/uk.co.vedaconsulting.gdpr;   git checkout '2.9'",
-            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.angularprofiles; git checkout '288432a'",
-            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.contactlayout;   git checkout 'fabf4c6'",
-            "cd web/sites/all/modules/contrib/civicrm/ext/de.systopia.osm;             git checkout '1.2.1'",
-            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.shoreditch;      git checkout 'e52d5b8'"
+            "cd web/sites/all/modules/contrib/civicrm/ext/nz.co.fuzion.csvimport;      git checkout '1359f9a8'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/uk.co.vedaconsulting.gdpr;   git checkout '3.1'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.angularprofiles; git checkout 'v1.2.2'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.contactlayout;   git checkout '1.9.0'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/de.systopia.osm;             git checkout '1.3'",
+            "cd web/sites/all/modules/contrib/civicrm/ext/org.civicrm.shoreditch;      git checkout '1.0.0-beta.6'"
         ],
         "move-drush-files": [
             "cp -rl web/profiles/civicrmprofile/drush web/sites/all",
