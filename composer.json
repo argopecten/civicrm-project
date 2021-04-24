@@ -130,7 +130,7 @@
         "drush/drush": "^8.0",
         "symfony/filesystem": "~2.7|^3",
         "webflo/drupal-finder": "^1.0.0",
-        "argopecten/civicrmprofile": "7.x-proba"
+        "argopecten/civicrmprofile": "dev-7.x-proba"
     },
     "conflict": {
         "drupal/core": "8.*"
