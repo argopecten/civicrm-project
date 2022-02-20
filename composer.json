@@ -15,12 +15,12 @@
         }
     ],
     "require": {
-        "civicrm/civicrm-core": "~5.46",
-        "civicrm/civicrm-drupal-8": "~5.46",
-        "civicrm/civicrm-packages": "~5.46",
+        "civicrm/civicrm-core": "^5.46",
+        "civicrm/civicrm-drupal-8": "^5.46",
+        "civicrm/civicrm-packages": "^5.46",
         "composer/installers": "^1.9",
-        "drupal/core-composer-scaffold": "9.3.5",
-        "drupal/core-recommended": "9.3.5"
+        "drupal/core-composer-scaffold": "^9.3",
+        "drupal/core-recommended": "^9.3"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -49,6 +49,7 @@
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
         },
         "enable-patching": "true",
+        "compile-mode": "whitelist",
         "compile-whitelist": ["civicrm/civicrm-core", "civicrm/composer-compile-lib"]
     }
 }
