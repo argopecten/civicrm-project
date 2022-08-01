@@ -15,6 +15,13 @@
         }
     ],
     "require": {
+        "ext-bcmath": "*",
+        "ext-curl": "*",
+        "ext-intl": "*",
+        "ext-mbstring": "*",
+        "ext-soap": "*",
+        "ext-zip": "*",
+        "php": "7.4.* || 8.0.*",
         "civicrm/civicrm-core": "~5.51",
         "civicrm/civicrm-drupal-8": "~5.51",
         "civicrm/civicrm-packages": "~5.51",
@@ -29,7 +36,10 @@
     "prefer-stable": true,
     "config": {
         "sort-packages": true,
-        "allow-plugins": true
+        "allow-plugins": true,
+        "platform": {
+            "php": "7.4"
+        }
     },
     "extra": {
         "drupal-scaffold": {
