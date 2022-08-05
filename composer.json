@@ -22,12 +22,16 @@
         "ext-soap": "*",
         "ext-zip": "*",
         "php": "7.4.* || 8.0.*",
-        "civicrm/civicrm-core": "~5.51",
-        "civicrm/civicrm-drupal-8": "~5.51",
-        "civicrm/civicrm-packages": "~5.51",
+        "civicrm/civicrm-core": "^5.52",
+        "civicrm/civicrm-drupal-8": "^5.52",
+        "civicrm/civicrm-packages": "^5.52",
         "composer/installers": "^1.9",
-        "drupal/core-composer-scaffold": "9.4.3",
-        "drupal/core-recommended": "9.4.3"
+        "drupal-composer/drupal-l10n": "^2.0",
+        "drupal/bootstrap": "^3.25",
+        "drupal/civicrm_entity": "^3.3",
+        "drupal/core-composer-scaffold": "^9.4",
+        "drupal/core-recommended": "^9.4",
+        "drupal/webform_civicrm": "^6.2"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -41,11 +45,27 @@
             "php": "7.4"
         }
     },
+    "scripts": {
+        "remove-built-in-profiles": [
+            "rm -rf web/core/profiles/demo_umami",
+            "rm -rf web/core/profiles/minimal",
+            "rm -rf web/core/profiles/nightwatch_*",
+            "rm -rf web/core/profiles/testin*"
+        ],
+        "post-install-cmd": [
+            "@remove-built-in-profiles",
+            "bash scripts/install-l10n/deploy-civicrm-l10n.sh 5.52.0"
+        ]
+    },
     "extra": {
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
             }
+        },
+        "drupal-l10n": {
+            "destination": "core/profiles/standard/translations",
+            "languages": ["hu"]
         },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
@@ -57,6 +77,14 @@
             "web/modules/custom/{$name}": ["type:drupal-custom-module"],
             "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
+        },
+        "downloads": {
+            "shoreditch": {
+                "version": "1.0.0-beta.11",
+                "path": "vendor/civicrm/civicrm-core/ext/org.civicrm.shoreditch",
+                "url": "https://github.com/civicrm/org.civicrm.shoreditch/archive/{$version}.zip",
+                "ignore": ["package.json", ".stylelintrc"]
+            }
         },
         "enable-patching": "true",
         "compile-whitelist": ["civicrm/civicrm-core", "civicrm/composer-compile-lib"]
