@@ -84,7 +84,13 @@
                 "path": "vendor/civicrm/civicrm-core/ext/org.civicrm.shoreditch",
                 "url": "https://github.com/civicrm/org.civicrm.shoreditch/archive/{$version}.zip",
                 "ignore": ["package.json", ".stylelintrc"]
-            }
+            },
+            "org.civicrm.contactlayout": {
+                "version": "2.1.0",
+                "path": "vendor/civicrm/civicrm-core/ext/org.civicrm.contactlayout",
+                "url": "https://github.com/civicrm/civicrm.contactlayout/archive/{$version}.zip"
+            },
+
         },
         "enable-patching": "true",
         "compile-whitelist": ["civicrm/civicrm-core", "civicrm/composer-compile-lib"]
