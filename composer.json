@@ -54,7 +54,7 @@
         ],
         "post-install-cmd": [
             "@remove-built-in-profiles",
-            "bash scripts/install-l10n/deploy-civicrm-l10n.sh 5.52.0"
+            "bash scripts/install-l10n/deploy-civicrm-l10n.sh 5.52.2"
         ]
     },
     "extra": {
@@ -88,9 +88,8 @@
             "org.civicrm.contactlayout": {
                 "version": "2.1.0",
                 "path": "vendor/civicrm/civicrm-core/ext/org.civicrm.contactlayout",
-                "url": "https://github.com/civicrm/civicrm.contactlayout/archive/{$version}.zip"
-            },
-
+                "url": "https://github.com/civicrm/org.civicrm.contactlayout/archive/{$version}.zip"
+            }
         },
         "enable-patching": "true",
         "compile-whitelist": ["civicrm/civicrm-core", "civicrm/composer-compile-lib"]
