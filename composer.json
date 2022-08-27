@@ -8,12 +8,16 @@
         "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
         "chat": "https://www.drupal.org/node/314178"
     },
-    "repositories": [
-        {
+    "repositories": {
+        "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "civicrm-profile": {
+            "type": "vcs",
+            "url":  "https://github.com/argopecten/civicrm-profile"
         }
-    ],
+    },
     "require": {
         "ext-bcmath": "*",
         "ext-curl": "*",
@@ -31,7 +35,8 @@
         "drupal/civicrm_entity": "^3.3",
         "drupal/core-composer-scaffold": "^9.4",
         "drupal/core-recommended": "^9.4",
-        "drupal/webform_civicrm": "^6.2"
+        "drupal/webform_civicrm": "^6.2",
+        "argopecten/civicrmprofile": "9.x-dev"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -49,6 +54,7 @@
         "remove-built-in-profiles": [
             "rm -rf web/core/profiles/demo_umami",
             "rm -rf web/core/profiles/minimal",
+            "rm -rf web/core/profiles/standard",
             "rm -rf web/core/profiles/nightwatch_*",
             "rm -rf web/core/profiles/testin*"
         ],
