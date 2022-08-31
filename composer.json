@@ -70,7 +70,7 @@
             }
         },
         "drupal-l10n": {
-            "destination": "core/profiles/standard/translations",
+            "destination": "profiles/custom/civicrmprofile/translations",
             "languages": ["hu"]
         },
         "installer-paths": {
