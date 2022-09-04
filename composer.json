@@ -36,7 +36,7 @@
         "drupal/core-composer-scaffold": "^9.4",
         "drupal/core-recommended": "^9.4",
         "drupal/webform_civicrm": "^6.2",
-        "argopecten/civicrmprofile": "hooks-dev"
+        "argopecten/civicrmprofile": "5.52.3+9.4.5"
     },
     "conflict": {
         "drupal/drupal": "*"

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa01501ff6c2e8b78e9a412ddbbd59db",
+    "content-hash": "7e66a615c53043d38c140870835c1861",
     "packages": [
         {
             "name": "adrienrn/php-mimetyper",
@@ -48,16 +48,16 @@
         },
         {
             "name": "argopecten/civicrmprofile",
-            "version": "dev-hooks",
+            "version": "5.52.3+9.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/argopecten/civicrm-profile.git",
-                "reference": "233607d0648f293d87e6ae46be11dcff44b325e8"
+                "reference": "5e05f9a18dddc065de7cfa4abbe155f7b44d88d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/argopecten/civicrm-profile/zipball/233607d0648f293d87e6ae46be11dcff44b325e8",
-                "reference": "233607d0648f293d87e6ae46be11dcff44b325e8",
+                "url": "https://api.github.com/repos/argopecten/civicrm-profile/zipball/5e05f9a18dddc065de7cfa4abbe155f7b44d88d0",
+                "reference": "5e05f9a18dddc065de7cfa4abbe155f7b44d88d0",
                 "shasum": ""
             },
             "require": {
@@ -75,10 +75,10 @@
             "type": "drupal-custom-profile",
             "description": "The CiviCRM profile from Argopecten.",
             "support": {
-                "source": "https://github.com/argopecten/civicrm-profile/tree/hooks",
+                "source": "https://github.com/argopecten/civicrm-profile/tree/5.52.3+9.4.5",
                 "issues": "https://github.com/argopecten/civicrm-profile/issues"
             },
-            "time": "2022-09-02T12:57:10+00:00"
+            "time": "2022-09-04T17:19:50+00:00"
         },
         {
             "name": "asm89/stack-cors",
@@ -9085,9 +9085,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "argopecten/civicrmprofile": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
