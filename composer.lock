@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3c9e8673910bd32bd19389b3dc9c1d44",
+    "content-hash": "fa01501ff6c2e8b78e9a412ddbbd59db",
     "packages": [
         {
             "name": "adrienrn/php-mimetyper",
@@ -48,16 +48,16 @@
         },
         {
             "name": "argopecten/civicrmprofile",
-            "version": "9.x-dev",
+            "version": "dev-hooks",
             "source": {
                 "type": "git",
                 "url": "https://github.com/argopecten/civicrm-profile.git",
-                "reference": "cc5a9cf9f850804bc595bcb64a692d6d805bf477"
+                "reference": "233607d0648f293d87e6ae46be11dcff44b325e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/argopecten/civicrm-profile/zipball/cc5a9cf9f850804bc595bcb64a692d6d805bf477",
-                "reference": "cc5a9cf9f850804bc595bcb64a692d6d805bf477",
+                "url": "https://api.github.com/repos/argopecten/civicrm-profile/zipball/233607d0648f293d87e6ae46be11dcff44b325e8",
+                "reference": "233607d0648f293d87e6ae46be11dcff44b325e8",
                 "shasum": ""
             },
             "require": {
@@ -75,10 +75,10 @@
             "type": "drupal-custom-profile",
             "description": "The CiviCRM profile from Argopecten.",
             "support": {
-                "source": "https://github.com/argopecten/civicrm-profile/tree/9.x",
+                "source": "https://github.com/argopecten/civicrm-profile/tree/hooks",
                 "issues": "https://github.com/argopecten/civicrm-profile/issues"
             },
-            "time": "2022-08-27T16:02:33+00:00"
+            "time": "2022-09-02T12:57:10+00:00"
         },
         {
             "name": "asm89/stack-cors",
@@ -416,16 +416,16 @@
         },
         {
             "name": "civicrm/civicrm-core",
-            "version": "5.52.2",
+            "version": "5.52.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/civicrm/civicrm-core.git",
-                "reference": "a9faea2c39a8c34f98a86f117df10cfafedfa560"
+                "reference": "5a183fd9f043bde7067a5fddbf681056094bf615"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/civicrm/civicrm-core/zipball/a9faea2c39a8c34f98a86f117df10cfafedfa560",
-                "reference": "a9faea2c39a8c34f98a86f117df10cfafedfa560",
+                "url": "https://api.github.com/repos/civicrm/civicrm-core/zipball/5a183fd9f043bde7067a5fddbf681056094bf615",
+                "reference": "5a183fd9f043bde7067a5fddbf681056094bf615",
                 "shasum": ""
             },
             "require": {
@@ -870,7 +870,7 @@
             ],
             "description": "Open source constituent relationship management for non-profits, NGOs and advocacy organizations.",
             "support": {
-                "source": "https://github.com/civicrm/civicrm-core/tree/5.52.2"
+                "source": "https://github.com/civicrm/civicrm-core/tree/5.52.3"
             },
             "funding": [
                 {
@@ -878,7 +878,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2022-08-13T05:27:17+00:00"
+            "time": "2022-08-30T23:04:23+00:00"
         },
         {
             "name": "civicrm/civicrm-cxn-rpc",
@@ -923,7 +923,7 @@
         },
         {
             "name": "civicrm/civicrm-drupal-8",
-            "version": "5.52.2",
+            "version": "5.52.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/civicrm/civicrm-drupal-8.git",
@@ -972,7 +972,7 @@
             ],
             "description": "Open source constituent relationship management for non-profits, NGOs and advocacy organizations.",
             "support": {
-                "source": "https://github.com/civicrm/civicrm-drupal-8/tree/5.52.2"
+                "source": "https://github.com/civicrm/civicrm-drupal-8/tree/5.52.3"
             },
             "funding": [
                 {
@@ -984,7 +984,7 @@
         },
         {
             "name": "civicrm/civicrm-packages",
-            "version": "5.52.2",
+            "version": "5.52.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/civicrm/civicrm-packages.git",
@@ -1000,7 +1000,7 @@
             "notification-url": "https://packagist.org/downloads/",
             "description": "Legacy third party dependencies for CiviCRM",
             "support": {
-                "source": "https://github.com/civicrm/civicrm-packages/tree/5.52.2"
+                "source": "https://github.com/civicrm/civicrm-packages/tree/5.52.3"
             },
             "time": "2022-06-30T23:40:42+00:00"
         },
@@ -2756,16 +2756,16 @@
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.5.1",
+            "version": "1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "fe752aedc9fd8fcca3fe7ad05d419d32998a06da"
+                "reference": "b94b2807d85443f9719887892882d0329d1e2598"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/fe752aedc9fd8fcca3fe7ad05d419d32998a06da",
-                "reference": "fe752aedc9fd8fcca3fe7ad05d419d32998a06da",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/b94b2807d85443f9719887892882d0329d1e2598",
+                "reference": "b94b2807d85443f9719887892882d0329d1e2598",
                 "shasum": ""
             },
             "require": {
@@ -2820,7 +2820,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/promises/issues",
-                "source": "https://github.com/guzzle/promises/tree/1.5.1"
+                "source": "https://github.com/guzzle/promises/tree/1.5.2"
             },
             "funding": [
                 {
@@ -2836,7 +2836,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-10-22T20:56:57+00:00"
+            "time": "2022-08-28T14:55:35+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -4951,16 +4951,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "2.0.37",
+            "version": "2.0.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "c812fbb4d6b4d7f30235ab7298a12f09ba13b37c"
+                "reference": "b03536539f43a4f9aa33c4f0b2f3a1c752088fcd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/c812fbb4d6b4d7f30235ab7298a12f09ba13b37c",
-                "reference": "c812fbb4d6b4d7f30235ab7298a12f09ba13b37c",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/b03536539f43a4f9aa33c4f0b2f3a1c752088fcd",
+                "reference": "b03536539f43a4f9aa33c4f0b2f3a1c752088fcd",
                 "shasum": ""
             },
             "require": {
@@ -4975,7 +4975,8 @@
                 "ext-gmp": "Install the GMP (GNU Multiple Precision) extension in order to speed up arbitrary precision integer arithmetic operations.",
                 "ext-libsodium": "SSH2/SFTP can make use of some algorithms provided by the libsodium-php extension.",
                 "ext-mcrypt": "Install the Mcrypt extension in order to speed up a few other cryptographic operations.",
-                "ext-openssl": "Install the OpenSSL extension in order to speed up a wide variety of cryptographic operations."
+                "ext-openssl": "Install the OpenSSL extension in order to speed up a wide variety of cryptographic operations.",
+                "ext-xml": "Install the XML extension to load XML formatted public keys."
             },
             "type": "library",
             "autoload": {
@@ -5040,7 +5041,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpseclib/phpseclib/issues",
-                "source": "https://github.com/phpseclib/phpseclib/tree/2.0.37"
+                "source": "https://github.com/phpseclib/phpseclib/tree/2.0.38"
             },
             "funding": [
                 {
@@ -5056,7 +5057,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-04T04:57:45+00:00"
+            "time": "2022-09-02T17:04:26+00:00"
         },
         {
             "name": "psr/cache",
@@ -5562,16 +5563,16 @@
         },
         {
             "name": "scssphp/scssphp",
-            "version": "v1.10.5",
+            "version": "v1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/scssphp/scssphp.git",
-                "reference": "6d44282ccf283e133ab70b6282f8e068ff2f9bf9"
+                "reference": "33749d12c2569bb24071f94e9af828662dabb068"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scssphp/scssphp/zipball/6d44282ccf283e133ab70b6282f8e068ff2f9bf9",
-                "reference": "6d44282ccf283e133ab70b6282f8e068ff2f9bf9",
+                "url": "https://api.github.com/repos/scssphp/scssphp/zipball/33749d12c2569bb24071f94e9af828662dabb068",
+                "reference": "33749d12c2569bb24071f94e9af828662dabb068",
                 "shasum": ""
             },
             "require": {
@@ -5636,9 +5637,9 @@
             ],
             "support": {
                 "issues": "https://github.com/scssphp/scssphp/issues",
-                "source": "https://github.com/scssphp/scssphp/tree/v1.10.5"
+                "source": "https://github.com/scssphp/scssphp/tree/v1.11.0"
             },
-            "time": "2022-07-27T15:52:39+00:00"
+            "time": "2022-09-02T21:24:55+00:00"
         },
         {
             "name": "stack/builder",
