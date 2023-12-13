@@ -105,7 +105,7 @@ vendor/bin/drush site-install standard --yes \
 # restore write permission for CiviCRM install, TBC why needed?
 find ./web -type d -exec chmod 750 '{}' \+
 # install CiviCRM modules
-vendor/bin/drush pm:install civicrm civicrmtheme --uri=$SITE_URI
+vendor/bin/drush pm:install civicrm --uri=$SITE_URI
 
 echo "DP | --------------------------------------------------------------------"
 echo "DP | F) Finalizing file settings on fresh create folders ..."
