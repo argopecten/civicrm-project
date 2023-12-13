@@ -102,8 +102,10 @@ vendor/bin/drush site-install standard --yes \
   --site-name=$SITE_URI \
   --sites-subdir=$SITE_URI
 
+# restore write permission for CiviCRM install, TBC why needed?
+find ./web -type d -exec chmod 750 '{}' \+
 # install CiviCRM modules
-vendor/bin/drush pm:install civicrm civicrmtheme --uri=crm1.local
+vendor/bin/drush pm:install civicrm civicrmtheme --uri=$SITE_URI
 
 echo "DP | --------------------------------------------------------------------"
 echo "DP | F) Finalizing file settings on fresh create folders ..."
@@ -127,4 +129,4 @@ sudo systemctl reload nginx
 
 # set final password for first (admin) user
 echo "$(echo `pwgen 5 4 -c -n -s -B` | tr -s ' ' '_' )" > admin_pwd.txt
-vendor/bin/drush user:password admin '$(cat admin_pwd.txt)' --uri=$SITE_URI
+vendor/bin/drush user:password admin $(cat admin_pwd.txt) --uri=$SITE_URI
