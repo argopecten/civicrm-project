@@ -106,6 +106,8 @@ vendor/bin/drush site-install standard --yes \
 find ./web -type d -exec chmod 750 '{}' \+
 # install CiviCRM modules
 vendor/bin/drush pm:install civicrm --uri=$SITE_URI
+# Add primary key to civicrm_install_canary table, as workaround
+sudo /usr/bin/mysql -u root -p"$DB_ROOT_PWD" -e "USE $DRUPAL_DB_NAME; ALTER TABLE civicrm_install_canary ADD PRIMARY KEY (id)"
 
 echo "DP | --------------------------------------------------------------------"
 echo "DP | F) Finalizing file settings on fresh create folders ..."
