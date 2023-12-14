@@ -66,6 +66,16 @@ echo "DP | B) Preparing Drupal settings file and folders ..."
 mkdir -p web/sites/$SITE_URI
 cp web/sites/default/default.settings.php web/sites/$SITE_URI/settings.php
 
+cat <<EOF >> web/sites/$SITE_URI/settings.php
+#
+# change trusted_host_patterns
+# https://www.drupal.org/docs/getting-started/installing-drupal/trusted-host-settings
+\$settings['trusted_host_patterns'] = [
+   '^$SITE_URI$',
+   '^.+\.$SITE_URI$',
+];
+EOF
+
 echo "DP | --------------------------------------------------------------------"
 echo "DP | C) Set file ownerships and permissions ..."
 script_user=$(whoami)
