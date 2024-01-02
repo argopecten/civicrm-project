@@ -12,10 +12,6 @@
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        "civiboot": {
-            "type": "vcs",
-            "url":  "https://github.com/argopecten/civiboot"
         }
     },
     "require": {
@@ -27,11 +23,13 @@
         "ext-xml": "*",
         "ext-zip": "*",
         "php": "8.0.* || 8.1.*",
-        "argopecten/civiboot": "^2.0",
         "civicrm/civicrm-core": "^5.68",
         "civicrm/civicrm-drupal-8": "^5.68",
         "civicrm/civicrm-packages": "^5.68",
         "composer/installers": "^2.0",
+        "drupal/belgrade": "^2.0",
+        "drupal/commerce": "^2.37",
+        "drupal/commerce_shipping": "^2.7",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drush/drush": "^12.4"
@@ -39,7 +37,7 @@
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
         "sort-packages": true,

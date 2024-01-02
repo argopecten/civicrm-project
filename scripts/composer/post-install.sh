@@ -118,6 +118,10 @@ find ./web -type d -exec chmod 750 '{}' \+
 vendor/bin/drush pm:install civicrm --uri=$SITE_URI
 # Add primary key to civicrm_install_canary table, as workaround
 sudo /usr/bin/mysql -u root -p"$DB_ROOT_PWD" -e "USE $DRUPAL_DB_NAME; ALTER TABLE civicrm_install_canary ADD PRIMARY KEY (id)"
+# Enable theme for Drupal Commerce
+vendor/bin/drush theme:enable belgrade --uri=$SITE_URI
+# Enable Drupal Commerce modules
+vendor/bin/drush pm:install -y commerce, commerce_cart, commerce_checkout, commerce_log, commerce_number_pattern, commerce_order, commerce_payment_example, commerce_price, commerce_product, commerce_promotion, commerce_store, commerce_tax, commerce_shipping --uri=$SITE_URI
 
 echo "DP | --------------------------------------------------------------------"
 echo "DP | F) Finalizing file settings on fresh create folders ..."
