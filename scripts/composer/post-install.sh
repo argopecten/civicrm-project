@@ -71,8 +71,8 @@ cat <<EOF >> web/sites/$SITE_URI/settings.php
 # change trusted_host_patterns
 # https://www.drupal.org/docs/getting-started/installing-drupal/trusted-host-settings
 \$settings['trusted_host_patterns'] = [
-   '^$SITE_URI$',
-   '^.+\.$SITE_URI$',
+   "^$SITE_URI$",
+   "^.+\.$SITE_URI$",
 ];
 EOF
 
@@ -94,15 +94,10 @@ find ./web/sites/$SITE_URI -type f -exec chmod 660 '{}' \+
 
 echo "DP | --------------------------------------------------------------------"
 echo "DP | D) Configure webserver to serve the site ..."
-# site parameters for webserver
-echo " # site config for $DRUPAL_ROOT
-server {
-  server_name   $SITE_URI;
-  root          $DRUPAL_ROOT/web;
-  ### drupal specific configurations
-  include       /usr/local/etc/nginx-config/core.d/*;
-}
-" | sudo tee /usr/local/etc/nginx-config/sites.d/$SITE_URI.conf
+# site config for webserver, except SSL certs!
+sudo cp /usr/local/etc/nginx-config/sites.d/$(hostname -f).conf \
+     /usr/local/etc/nginx-config/sites.d/$SITE_URI.conf
+sudo sed -i -e "s/$(hostname -f)/$SITE_URI/" /usr/local/etc/nginx-config/sites.d/$SITE_URI.conf
 
 echo "DP | --------------------------------------------------------------------"
 echo "DP | E) Running the drupal installer ..."
@@ -123,6 +118,10 @@ vendor/bin/drush theme:enable belgrade --uri=$SITE_URI
 # Enable Drupal Commerce modules
 vendor/bin/drush pm:install -y commerce, commerce_cart, commerce_checkout, commerce_log, commerce_number_pattern, commerce_order, commerce_payment_example, commerce_price, commerce_product, commerce_promotion, commerce_store, commerce_tax, commerce_shipping --uri=$SITE_URI
 
+# set final password for first (admin) user
+echo "$(echo `pwgen 5 4 -c -n -s -B` | tr -s ' ' '_' )" > admin_pwd.txt
+vendor/bin/drush user:password admin $(cat admin_pwd.txt) --uri=$SITE_URI
+
 echo "DP | --------------------------------------------------------------------"
 echo "DP | F) Finalizing file settings on fresh create folders ..."
 
@@ -142,7 +141,3 @@ echo "DP | --------------------------------------------------------------------"
 echo "DP | G) Cleaning up ..."
 # reload services
 sudo systemctl reload nginx
-
-# set final password for first (admin) user
-echo "$(echo `pwgen 5 4 -c -n -s -B` | tr -s ' ' '_' )" > admin_pwd.txt
-vendor/bin/drush user:password admin $(cat admin_pwd.txt) --uri=$SITE_URI
