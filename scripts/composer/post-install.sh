@@ -71,8 +71,8 @@ cat <<EOF >> web/sites/$SITE_URI/settings.php
 # change trusted_host_patterns
 # https://www.drupal.org/docs/getting-started/installing-drupal/trusted-host-settings
 \$settings['trusted_host_patterns'] = [
-   '^$SITE_URI$',
-   '^.+\.$SITE_URI$',
+   "^$SITE_URI$",
+   "^.+\.$SITE_URI$",
 ];
 EOF
 
@@ -94,15 +94,10 @@ find ./web/sites/$SITE_URI -type f -exec chmod 660 '{}' \+
 
 echo "DP | --------------------------------------------------------------------"
 echo "DP | D) Configure webserver to serve the site ..."
-# site parameters for webserver
-echo " # site config for $DRUPAL_ROOT
-server {
-  server_name   $SITE_URI;
-  root          $DRUPAL_ROOT/web;
-  ### drupal specific configurations
-  include       /usr/local/etc/nginx-config/core.d/*;
-}
-" | sudo tee /usr/local/etc/nginx-config/sites.d/$SITE_URI.conf
+# site config for webserver, except SSL certs!
+sudo cp /usr/local/etc/nginx-config/sites.d/$(hostname -f).conf \
+     /usr/local/etc/nginx-config/sites.d/$SITE_URI.conf
+sudo sed -i -e "s/$(hostname -f)/$SITE_URI/" /usr/local/etc/nginx-config/sites.d/$SITE_URI.conf
 
 echo "DP | --------------------------------------------------------------------"
 echo "DP | E) Running the drupal installer ..."
@@ -118,6 +113,10 @@ find ./web -type d -exec chmod 750 '{}' \+
 vendor/bin/drush pm:install civicrm --uri=$SITE_URI
 # Add primary key to civicrm_install_canary table, as workaround
 sudo /usr/bin/mysql -u root -p"$DB_ROOT_PWD" -e "USE $DRUPAL_DB_NAME; ALTER TABLE civicrm_install_canary ADD PRIMARY KEY (id)"
+
+# set final password for first (admin) user
+echo "$(echo `pwgen 5 4 -c -n -s -B` | tr -s ' ' '_' )" > admin_pwd.txt
+vendor/bin/drush user:password admin $(cat admin_pwd.txt) --uri=$SITE_URI
 
 echo "DP | --------------------------------------------------------------------"
 echo "DP | F) Finalizing file settings on fresh create folders ..."
@@ -138,7 +137,3 @@ echo "DP | --------------------------------------------------------------------"
 echo "DP | G) Cleaning up ..."
 # reload services
 sudo systemctl reload nginx
-
-# set final password for first (admin) user
-echo "$(echo `pwgen 5 4 -c -n -s -B` | tr -s ' ' '_' )" > admin_pwd.txt
-vendor/bin/drush user:password admin $(cat admin_pwd.txt) --uri=$SITE_URI
