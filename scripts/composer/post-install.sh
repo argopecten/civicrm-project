@@ -116,7 +116,7 @@ sudo /usr/bin/mysql -u root -p"$DB_ROOT_PWD" -e "USE $DRUPAL_DB_NAME; ALTER TABL
 # Enable theme for Drupal Commerce
 vendor/bin/drush theme:enable belgrade --uri=$SITE_URI
 # Enable Drupal Commerce modules
-vendor/bin/drush pm:install -y commerce, commerce_cart, commerce_checkout, commerce_log, commerce_number_pattern, commerce_order, commerce_payment_example, commerce_price, commerce_product, commerce_promotion, commerce_store, commerce_tax, commerce_shipping --uri=$SITE_URI
+vendor/bin/drush pm:install -y commerce, commerce_cart, commerce_checkout, commerce_log, commerce_number_pattern, commerce_order, commerce_payment_example, commerce_price, commerce_product, commerce_promotion, commerce_store, commerce_tax, commerce_file --uri=$SITE_URI
 
 # set final password for first (admin) user
 echo "$(echo `pwgen 5 4 -c -n -s -B` | tr -s ' ' '_' )" > admin_pwd.txt
